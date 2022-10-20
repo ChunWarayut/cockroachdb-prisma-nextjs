@@ -3,7 +3,6 @@ import { useSession, signIn, signOut } from "next-auth/react";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 import DefaultLayout from "../components/default/layout";
-import { SIDEBAR } from "./data";
 
 export default function Home() {
   const { data: session } = useSession();
