@@ -1,4 +1,5 @@
 import { signOut, useSession } from "next-auth/react";
+import Script from "next/script";
 
 export default function DefaultNav() {
   const { data: session } = useSession();
@@ -48,10 +49,10 @@ export default function DefaultNav() {
               <img
                 src="https://demo.themesberg.com/windster/images/logo.svg"
                 className="h-6 mr-2"
-                alt="ระบบบริหารจัดการเว็บไซต์"
+                alt="BlueC Engineering"
               />
               <span className="self-center whitespace-nowrap">
-                ระบบบริหารจัดการเว็บไซต์
+                BlueC Engineering
               </span>
             </a>
           </div>
@@ -90,6 +91,9 @@ export default function DefaultNav() {
           </div>
         </div>
       </div>
+
+      <Script async defer src="https://buttons.github.io/buttons.js"></Script>
+      <Script src="https://demo.themesberg.com/windster/app.bundle.js"></Script>
     </nav>
   );
 }

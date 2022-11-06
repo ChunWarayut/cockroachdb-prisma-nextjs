@@ -113,38 +113,15 @@ export default function Home() {
         <div className="w-full grid grid-cols-1 gap-4 mb-4">
           <div className="bg-white shadow rounded-lg">
 
-            <div className="flex flex-row items-end justify-between py-2">
+            <div className="flex flex-row items-center justify-between py-2">
 
-              <div class="w-full md:w-2/2 px-3">
-                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
-                  Date
-                </label>
-                <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="date" placeholder="01/01/2022" value="01/01/2022" />
+              <div class="flex items-center pl-4 rounded">
+                <input id="bordered-checkbox-2" type="checkbox" value="" name="bordered-checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+                <label for="bordered-checkbox-2" class="py-4 ml-2 w-full text-sm font-medium text-gray-900 dark:text-gray-300 pr-2">Supplier: xxxxxxxxxxxx</label>
               </div>
-
-              <div class="w-full md:w-2/2 px-3">
-                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
-                  Supplier
-                </label>
-                <select id="countries" class=" bg-gray-200 border border-gray-200 text-gray-700 text-sm rounded py-3 px-4 leading-tight focus:ring-gray-500 focus:border-gray-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-gray-500 dark:focus:border-gray-500">
-                  <option selected="">Choose a supplier</option>
-                  <option value="US">United States</option>
-                  <option value="CA">Canada</option>
-                  <option value="FR">France</option>
-                  <option value="DE">Germany</option>
-                </select>
+              <div class="flex items-center pr-4 rounded">
+                <label for="bordered-checkbox-2" class="py-4 ml-2 w-full text-sm font-medium text-gray-900 dark:text-gray-300 pr-2">Status: xxxxxxxxxxxx</label>
               </div>
-              <div class="">
-                <button
-                  name="create"
-                  value="create"
-                  onClick={() => setShowModal2(true)}
-                  className="whitespace-nowrap hidden sm:inline-flex ml-5 text-white bg-cyan-600 hover:bg-cyan-700 focus:ring-4 focus:ring-cyan-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center items-center mr-3"
-                >
-                  ADD
-                </button>
-              </div>
-
             </div>
 
             {TablePagination()}
@@ -152,46 +129,74 @@ export default function Home() {
         </div>
 
 
-        <div className="flex flex-row items-center">
+        <div className="w-full grid grid-cols-1 gap-4 mb-4">
+          <div className="bg-white shadow rounded-lg">
 
-          <div className="w-full gap-4 mb-4 flex items-center justify-start">
-            <div>
-              <button
-                name="create"
-                value="create"
-                onClick={() => setShowModal2(true)}
-                className="hidden sm:inline-flex ml-5 text-white bg-cyan-600 hover:bg-cyan-700 focus:ring-4 focus:ring-cyan-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center items-center mr-3"
-              >
-                Compare
-              </button>
+            <div className="flex flex-row items-center justify-between py-2">
+
+              <div class="flex items-center pl-4 rounded">
+                <input id="bordered-checkbox-2" type="checkbox" value="" name="bordered-checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+                <label for="bordered-checkbox-2" class="py-4 ml-2 w-full text-sm font-medium text-gray-900 dark:text-gray-300 pr-2">Supplier: xxxxxxxxxxxx</label>
+              </div>
+              <div class="flex items-center pr-4 rounded">
+                <label for="bordered-checkbox-2" class="py-4 ml-2 w-full text-sm font-medium text-gray-900 dark:text-gray-300 pr-2">Status: xxxxxxxxxxxx</label>
+              </div>
             </div>
+
+            {TablePagination()}
           </div>
+        </div>
 
-          <div className="w-full gap-4 mb-4 flex items-center justify-end">
 
+        <div className="w-full grid grid-cols-1 gap-4 mb-4">
+          <div className="bg-white shadow rounded-lg">
+
+            <div className="flex flex-row items-center justify-between py-2">
+
+              <div class="flex items-center pl-4 rounded">
+                <input id="bordered-checkbox-2" type="checkbox" value="" name="bordered-checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+                <label for="bordered-checkbox-2" class="py-4 ml-2 w-full text-sm font-medium text-gray-900 dark:text-gray-300 pr-2">Supplier: xxxxxxxxxxxx</label>
+              </div>
+              <div class="flex items-center pr-4 rounded">
+                <label for="bordered-checkbox-2" class="py-4 ml-2 w-full text-sm font-medium text-gray-900 dark:text-gray-300 pr-2">Status: xxxxxxxxxxxx</label>
+              </div>
+            </div>
+
+            {TablePagination()}
+          </div>
+        </div>
+
+
+        <div className="w-full grid grid-cols-1 gap-4 mb-4">
+          <div className="bg-white shadow rounded-lg">
+
+            <div className="flex flex-row items-center justify-between py-2">
+
+              <div class="flex items-center pl-4 rounded">
+                <input id="bordered-checkbox-2" type="checkbox" value="" name="bordered-checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+                <label for="bordered-checkbox-2" class="py-4 ml-2 w-full text-sm font-medium text-gray-900 dark:text-gray-300 pr-2">Supplier: xxxxxxxxxxxx</label>
+              </div>
+              <div class="flex items-center pr-4 rounded">
+                <label for="bordered-checkbox-2" class="py-4 ml-2 w-full text-sm font-medium text-gray-900 dark:text-gray-300 pr-2">Status: xxxxxxxxxxxx</label>
+              </div>
+            </div>
+
+            {TablePagination()}
+          </div>
+        </div>
+
+
+        <div className="w-full gap-4 mb-4 flex items-center justify-end">
           <div>
-              <button
-                name="create"
-                value="create"
-                onClick={() => setShowModal2(true)}
-                className="hidden sm:inline-flex text-white bg-cyan-600 hover:bg-cyan-700 focus:ring-4 focus:ring-cyan-200 font-medium rounded-lg text-sm py-2.5 text-center items-center px-5"
-              >
-                Print
-              </button>
-            </div>
-
-            <div>
-              <button
-                name="create"
-                value="create"
-                onClick={() => setShowModal2(true)}
-                className="hidden sm:inline-flex ml-5 text-white bg-cyan-600 hover:bg-cyan-700 focus:ring-4 focus:ring-cyan-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center items-center mr-3"
-              >
-                <AiFillSave />&nbsp;Save
-              </button>
-            </div>
+            <button
+              name="create"
+              value="create"
+              onClick={() => setShowModal2(true)}
+              className="hidden sm:inline-flex ml-5 text-white bg-cyan-600 hover:bg-cyan-700 focus:ring-4 focus:ring-cyan-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center items-center mr-3"
+            >
+              <AiFillSave />&nbsp;บันทึก
+            </button>
           </div>
-
         </div>
         <>
           {showModal ? (

@@ -114,9 +114,9 @@ export default function DefaultFooter() {
         </div>
       </footer>
       <p className="text-center text-sm text-gray-500 my-10">
-        &copy; 2019-2021{" "}
+        &copy; 2019-2022{" "}
         <a href="#" className="hover:underline" target="_blank">
-          Themesmeeback
+        BlueC Engineering  CO.,LTD.
         </a>
         . All rights reserved.
       </p>

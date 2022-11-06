@@ -1,3 +1,4 @@
+import Script from "next/script";
 import DefaultFooter from "./footer";
 import DefaultLogo from "./logo";
 import DefaultNav from "./nav";
@@ -20,8 +21,9 @@ export default function DefaultLayout({ children }) {
           <DefaultFooter />
         </div>
       </div>
-      <script async defer src="https://buttons.github.io/buttons.js"></script>
-      <script src="https://demo.themesberg.com/windster/app.bundle.js"></script>
+
+      <Script async defer src="https://buttons.github.io/buttons.js"></Script>
+      <Script src="https://demo.themesberg.com/windster/app.bundle.js"></Script>
     </div>
   );
 }

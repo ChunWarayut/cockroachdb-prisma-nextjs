@@ -1,3 +1,4 @@
+import Script from "next/script";
 import { SIDEBAR } from "./data";
 
 export default function DefaultSidebar() {
@@ -48,6 +49,9 @@ export default function DefaultSidebar() {
           </div>
         </div>
       </div>
+
+      <Script async defer src="https://buttons.github.io/buttons.js"></Script>
+      <Script src="https://demo.themesberg.com/windster/app.bundle.js"></Script>
     </aside>
   );
 }

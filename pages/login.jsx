@@ -9,7 +9,7 @@ export default function SignIn({ csrfToken }) {
   const { data: session } = useSession();
   useEffect(() => {
     if (session?.expires) {
-        router.push("/");
+      router.push("/");
     }
   }, []);
 
@@ -26,12 +26,14 @@ export default function SignIn({ csrfToken }) {
           >
             <div className="flex items-center h-full px-20 bg-gray-900 bg-opacity-40">
               <div>
-                <h2 className="text-4xl font-bold text-white">MEE BACK</h2>
+                <h2 className="text-4xl font-bold text-white">
+                  บริษัท บลูซี เอ็นจิเนียริ่ง จำกัด
+                </h2>
 
                 <p className="max-w-xl mt-3 text-gray-300">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. In
-                  autem ipsa, nulla laboriosam dolores, repellendus perferendis
-                  libero suscipit nam temporibus molestiae
+                  BlueC Engineering CO.,LTD. 29/196 หมู่ 3 ซ.อัจฉริยะพัฒนา
+                  ถ.กายจนาภิเษก ต.ปลายบาง อ.บางกรวย จ.นนทบุรี 11130 โทร
+                  66-8-1618-1053
                 </p>
               </div>
             </div>
@@ -41,7 +43,7 @@ export default function SignIn({ csrfToken }) {
             <div className="flex-1">
               <div className="text-center">
                 <h2 className="text-4xl font-bold text-center text-gray-700 dark:text-white">
-                  MEE BACK
+                  BlueC Engineering
                 </h2>
 
                 <p className="mt-3 text-gray-500 dark:text-gray-300">
