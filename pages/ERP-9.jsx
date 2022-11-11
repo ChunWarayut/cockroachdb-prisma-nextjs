@@ -44,7 +44,18 @@ export default function Home() {
 
       <DefaultLayout>
 
-        {/* <div className="w-full gap-4 mb-4 flex items-center justify-end">
+        <div className="w-full gap-4 mb-4 flex items-center justify-end">
+
+          <div>
+            <button
+              name="create"
+              value="create"
+              onClick={() => setShowModal2(true)}
+              className="hidden sm:inline-flex text-white bg-red-600 hover:bg-red-700 focus:ring-4 focus:ring-red-200 font-medium rounded-lg text-sm py-2.5 text-center items-center px-5"
+            >
+              Close
+            </button>
+          </div>
 
           <div>
             <button
@@ -56,7 +67,8 @@ export default function Home() {
               Reprint
             </button>
           </div>
-        </div> */}
+        </div>
+
         <div className="w-full grid grid-cols-1 gap-4 mb-4">
           <div className="bg-white shadow rounded-lg p-4 sm:p-6 xl:p-8  2xl:col-span-2">
             <div className="container">
@@ -110,126 +122,79 @@ export default function Home() {
               <SlArrowRight className="text-2xl" />
               <p>PO</p>
               <SlArrowRight className="text-2xl" />
-              <p>Good Recipe</p>
+              <p>&nbsp;</p>
               <SlArrowRight className="text-2xl" />
-              <p>Invoice</p>
+              <p>&nbsp;</p>
               <SlArrowRight className="text-2xl" />
-              <p>Recipe</p>
+              <p>&nbsp;</p>
               <SlArrowRight className="text-2xl" />
-              <p>Done</p>
+              <p>&nbsp;</p>
 
             </div>
           </div>
         </div>
 
 
-        <div className="w-full grid grid-cols-1 gap-4 mb-4">
-          <div className="bg-white shadow rounded-lg p-4 sm:p-6 xl:p-8  2xl:col-span-2">
-
-            <div className="w-full gap-4 mb-4 flex items-end justify-start">
-              <h1 className="text-2xl">Quotation</h1>
-              <p>02/02/2022 13:00</p>
-            </div>
-
-            <div className="flex flex-row items-center justify-between py-2">
-
-              <div class="flex items-center pl-4 rounded">
-                <input id="bordered-checkbox-2" type="checkbox" value="" name="bordered-checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
-                <label for="bordered-checkbox-2" class="py-4 ml-2 w-full text-sm font-medium text-gray-900 dark:text-gray-300 pr-2">Supplier: xxxxxxxxxxxx</label>
-              </div>
-              <div class="flex items-center pr-4 rounded">
-                <label for="bordered-checkbox-2" class="py-4 ml-2 w-full text-sm font-medium text-gray-900 dark:text-gray-300 pr-2">Status: xxxxxxxxxxxx</label>
-              </div>
-            </div>
-
-            {TablePagination()}
-          </div>
-        </div>
-
 
         <div className="w-full grid grid-cols-1 gap-4 mb-4">
-          <div className="bg-white shadow rounded-lg p-4 sm:p-6 xl:p-8  2xl:col-span-2">
-
-            <div className="w-full gap-4 mb-4 flex items-end justify-start">
-              <h1 className="text-2xl">Purchase Order </h1>
-              <p>05/02/2022 17:00</p>
-            </div>
-
-            <div className="w-full gap-4 flex items-center justify-center">
+          <div className="bg-white shadow rounded-lg">
+            <div className="w-full gap-4 mb-4 flex items-center justify-center">
               <img src="https://www.dearcowboy.com/static/image/postimage/library366/01.jpg" />
             </div>
           </div>
         </div>
 
 
-        <div className="w-full grid grid-cols-1 gap-4 mb-4">
-          <div className="bg-white shadow rounded-lg p-4 sm:p-6 xl:p-8  2xl:col-span-2">
+        <div class="flex flex-wrap -mx-3 mb-2">
+          <div class="w-full md:w-3/3 px-3 mb-6 md:mb-0">
+            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
+              Upload File
+            </label>
 
-            <div className="w-full gap-4 mb-4 flex items-end justify-start">
-              <h1 className="text-2xl">Good Recipe </h1>
-              <p>10/02/2022 09:00</p>
-            </div>
-
-            <div className="w-full gap-4 flex items-center justify-center">
-              <img src="https://www.dearcowboy.com/static/image/postimage/library366/01.jpg" />
-            </div>
-
-            <div class="w-full md:w-2/2 px-8 mt-6">
-              <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
-                Comments
+            <div class="flex justify-center items-center w-full">
+              <label for="dropzone-file" class="flex flex-col justify-center items-center w-full h-64 bg-gray-50 rounded-lg border-2 border-gray-300 border-dashed cursor-pointer dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
+                <div class="flex flex-col justify-center items-center pt-5 pb-6">
+                  <svg aria-hidden="true" class="mb-3 w-10 h-10 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path></svg>
+                  <p class="mb-2 text-sm text-gray-500 dark:text-gray-400"><span class="font-semibold">Click to upload</span> or drag and drop</p>
+                  <p class="text-xs text-gray-500 dark:text-gray-400">SVG, PNG, JPG or GIF (MAX. 800x400px)</p>
+                </div>
+                <input id="dropzone-file" type="file" class="hidden" />
               </label>
-              <textarea class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="Doe"> </textarea>
             </div>
+
 
           </div>
         </div>
 
-        <div className="w-full grid grid-cols-1 gap-4 mb-4">
-          <div className="bg-white shadow rounded-lg p-4 sm:p-6 xl:p-8  2xl:col-span-2">
+        <div className="flex flex-row items-center">
 
-            <div className="w-full gap-4 mb-4 flex items-end justify-start">
-              <h1 className="text-2xl">Invoice</h1>
-              <p>15/02/2022 13:00</p>
+
+          <div className="w-full gap-4 mb-4 flex items-center justify-end">
+
+            <div>
+              <button
+                name="create"
+                value="create"
+                onClick={() => setShowModal2(true)}
+                className="hidden sm:inline-flex text-white bg-cyan-600 hover:bg-cyan-700 focus:ring-4 focus:ring-cyan-200 font-medium rounded-lg text-sm py-2.5 text-center items-center px-5"
+              >
+                Print
+              </button>
             </div>
 
-            <div className="w-full gap-4 flex items-center justify-center">
-              <img src="https://www.dearcowboy.com/static/image/postimage/library366/01.jpg" />
-            </div>
-{/* 
-            <div class="w-full md:w-2/2 px-8 mt-6">
-              <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
-                Comments
-              </label>
-              <textarea class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="Doe"> </textarea>
-            </div> */}
-
-          </div>
-        </div>
-
-        <div className="w-full grid grid-cols-1 gap-4 mb-4">
-          <div className="bg-white shadow rounded-lg p-4 sm:p-6 xl:p-8  2xl:col-span-2">
-
-            <div className="w-full gap-4 mb-4 flex items-end justify-start">
-              <h1 className="text-2xl">Recipe</h1>
-              <p>20/02/2022 09:00</p>
-            </div>
-
-            <div className="w-full gap-4 flex items-center justify-center">
-              <img src="https://www.dearcowboy.com/static/image/postimage/library366/01.jpg" />
+            <div>
+              <button
+                name="create"
+                value="create"
+                onClick={() => setShowModal2(true)}
+                className="hidden sm:inline-flex text-white bg-cyan-600 hover:bg-cyan-700 focus:ring-4 focus:ring-cyan-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center items-center mr-3"
+              >
+                <AiFillSave />&nbsp;Save
+              </button>
             </div>
           </div>
+
         </div>
-
-        <div className="w-full grid grid-cols-1 gap-4 mb-4">
-          <div className="bg-white shadow rounded-lg p-4 sm:p-6 xl:p-8  2xl:col-span-2">
-
-            <div className="w-full gap-4 flex items-end justify-start">
-              <h1 className="text-2xl">Done</h1>
-            </div>
-
-          </div>
-        </div>
-
         <>
           {showModal ? (
             <>
