@@ -10,12 +10,6 @@ import { BiBookContent, BiCart, BiNews } from 'react-icons/bi';
 import { GiStabbedNote } from 'react-icons/gi';
 import { FaFileInvoiceDollar } from 'react-icons/fa';
 
-const options = [
-  { value: "fox", label: "Fox CO. LTD." },
-  { value: "Butterfly", label: "Butterfly CO. LTD." },
-  { value: "Honeybee", label: "Honeybee CO. LTD." },
-];
-
 export default function Home() {
   const { data: session } = useSession();
   const [showModal, setShowModal] = React.useState(false);
