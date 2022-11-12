@@ -7,7 +7,13 @@ import Script from "next/script";
 import React from "react";
 import Select from 'react-tailwindcss-select';
 import { SlArrowRight } from 'react-icons/sl';
-import { AiFillEdit, AiFillDelete, AiFillFileAdd, AiFillSave } from 'react-icons/ai';
+
+import { ArrowRight, StepComponent } from "../components/stepComponent";
+
+import { AiFillEdit, AiFillDelete, AiFillFileAdd, AiFillSave, AiOutlineFileDone } from 'react-icons/ai';
+import { BiBookContent, BiCart, BiNews } from 'react-icons/bi';
+import { GiStabbedNote } from 'react-icons/gi';
+import { FaFileInvoiceDollar } from 'react-icons/fa';
 
 const options = [
   { value: "fox", label: "Fox CO. LTD." },
@@ -90,23 +96,32 @@ export default function Home() {
 
         <div className="w-full grid grid-cols-1 gap-4 mb-4">
           <div className="bg-white shadow rounded-lg p-4 sm:p-6 xl:p-8  2xl:col-span-2">
-            <div className="flex flex-row items-center justify-around">
+            <div>
+              <h1 class="mb-4 text-center font-black text-cyan-700">STEPS</h1>
+              <div class="flex flex-row items-center justify-around">
 
-              <p>Quotation</p>
-              <SlArrowRight className="text-2xl" />
-              <p>&nbsp;</p>
-              <SlArrowRight className="text-2xl" />
-              <p>&nbsp;</p>
-              <SlArrowRight className="text-2xl" />
-              <p>&nbsp;</p>
-              <SlArrowRight className="text-2xl" />
-              <p>&nbsp;</p>
-              <SlArrowRight className="text-2xl" />
-              <p>&nbsp;</p>
+                <StepComponent name="QN" description="Quotation" icon={<BiNews />} />
 
+                <ArrowRight />
+                <StepComponent nextStep name="PO" description="Purchase Order" icon={<BiCart />} />
+
+                <ArrowRight />
+                <StepComponent nextStep name="GR" description="Good Recipe" icon={<GiStabbedNote />} />
+
+                <ArrowRight />
+                <StepComponent nextStep name="INV" description="Invoice" icon={<FaFileInvoiceDollar />} />
+
+                <ArrowRight />
+                <StepComponent nextStep name="REC" description="Recipe" icon={<BiBookContent />} />
+
+                <ArrowRight />
+                <StepComponent nextStep name="DONE" description="Finish it!" icon={<AiOutlineFileDone />} />
+
+              </div>
             </div>
           </div>
         </div>
+
 
 
 
@@ -160,7 +175,7 @@ export default function Home() {
                 name="create"
                 value="create"
                 onClick={() => setShowModal2(true)}
-                className="hidden sm:inline-flex ml-5 text-white bg-cyan-600 hover:bg-cyan-700 focus:ring-4 focus:ring-cyan-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center items-center mr-3"
+                className="hidden sm:inline-flex ml-5 text-white bg-sky-700 hover:bg-sky-700 focus:ring-4 focus:ring-sky-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center items-center mr-3"
               >
                 Compare
               </button>
@@ -170,15 +185,11 @@ export default function Home() {
           <div className="w-full gap-4 mb-4 flex items-center justify-end">
 
           <div>
-              <button
-                name="create"
-                value="create"
-                onClick={() => setShowModal2(true)}
-                className="hidden sm:inline-flex text-white bg-cyan-600 hover:bg-cyan-700 focus:ring-4 focus:ring-cyan-200 font-medium rounded-lg text-sm py-2.5 text-center items-center px-5"
-              >
-                Print
-              </button>
+            <div class="flex items-center pl-4 rounded border border-gray-200 dark:border-gray-700">
+              <input checked id="bordered-checkbox-2" type="checkbox" value="" name="bordered-checkbox" class="w-4 h-4 text-cyan-600 bg-gray-100 rounded border-gray-300 focus:ring-cyan-500 dark:focus:ring-cyan-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+              <label for="bordered-checkbox-2" class="py-4 ml-2 w-full text-sm font-medium text-gray-900 dark:text-gray-300 pr-2">Print</label>
             </div>
+          </div>
 
             <div>
               <button

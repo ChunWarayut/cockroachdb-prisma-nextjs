@@ -1,5 +1,4 @@
 import Script from "next/script";
-import DefaultFooter from "./footer";
 import DefaultLogo from "./logo";
 import DefaultNav from "./nav";
 import DefaultSidebar from "./sidebar";
@@ -18,7 +17,7 @@ export default function DefaultLayout({ children }) {
           <main className="min-h-[69vh]">
             <div className="pt-6 px-4">{children}</div>
           </main>
-          <DefaultFooter />
+
         </div>
       </div>
 
