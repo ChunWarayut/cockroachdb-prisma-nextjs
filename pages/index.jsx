@@ -5,13 +5,10 @@ import { useRouter } from "next/router";
 import DefaultLayout from "../components/default/layout";
 import Script from "next/script";
 import React from "react";
-import Select from 'react-tailwindcss-select';
-import { SlArrowRight } from 'react-icons/sl';
 import { AiFillEdit, AiFillDelete, AiFillFileAdd, AiFillSave, AiOutlineFileDone } from 'react-icons/ai';
 import { BiBookContent, BiCart, BiNews } from 'react-icons/bi';
 import { GiStabbedNote } from 'react-icons/gi';
 import { FaFileInvoiceDollar } from 'react-icons/fa';
-import { MdPictureAsPdf, MdSimCardDownload } from 'react-icons/md';
 
 const options = [
   { value: "fox", label: "Fox CO. LTD." },
