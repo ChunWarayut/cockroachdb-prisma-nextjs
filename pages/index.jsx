@@ -12,8 +12,6 @@ import { FaFileInvoiceDollar } from 'react-icons/fa';
 
 export default function Home() {
   const { data: session } = useSession();
-  const [showModal, setShowModal] = React.useState(false);
-  const [showModal2, setShowModal2] = React.useState(false);
   const [animal, setAnimal] = React.useState(null);
 
   const routes = useRouter();
