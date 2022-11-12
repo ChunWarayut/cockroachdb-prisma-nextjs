@@ -12,7 +12,6 @@ import { FaFileInvoiceDollar } from 'react-icons/fa';
 
 export default function Home() {
   const { data: session } = useSession();
-  const [animal, setAnimal] = React.useState(null);
 
   const routes = useRouter();
   useEffect(() => {
@@ -21,12 +20,6 @@ export default function Home() {
     }
   }, [session]);
 
-  const handleChange = (value) => {
-    console.log("value:", value);
-    setAnimal(value);
-  };
-
-  console.log("session", session);
 
   return (
     <div>
