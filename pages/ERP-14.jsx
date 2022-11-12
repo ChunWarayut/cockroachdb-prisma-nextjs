@@ -7,7 +7,13 @@ import Script from "next/script";
 import React from "react";
 import Select from 'react-tailwindcss-select';
 import { SlArrowRight } from 'react-icons/sl';
-import { AiFillEdit, AiFillDelete, AiFillFileAdd, AiFillSave } from 'react-icons/ai';
+
+import { ArrowRight, StepComponent } from "../components/stepComponent";
+
+import { AiFillEdit, AiFillDelete, AiFillFileAdd, AiFillSave, AiOutlineFileDone } from 'react-icons/ai';
+import { BiBookContent, BiCart, BiNews } from 'react-icons/bi';
+import { GiStabbedNote } from 'react-icons/gi';
+import { FaFileInvoiceDollar } from 'react-icons/fa';
 
 const options = [
   { value: "fox", label: "Fox CO. LTD." },
@@ -104,23 +110,33 @@ export default function Home() {
 
         <div className="w-full grid grid-cols-1 gap-4 mb-4">
           <div className="bg-white shadow rounded-lg p-4 sm:p-6 xl:p-8  2xl:col-span-2">
-            <div className="flex flex-row items-center justify-around">
+            <div>
+              <h1 class="mb-4 text-center font-black text-cyan-700">STEPS</h1>
+              <div class="flex flex-row items-center justify-around">
 
-              <p>Quotation</p>
-              <SlArrowRight className="text-2xl" />
-              <p>PO</p>
-              <SlArrowRight className="text-2xl" />
-              <p>Good Recipe</p>
-              <SlArrowRight className="text-2xl" />
-              <p>Invoice</p>
-              <SlArrowRight className="text-2xl" />
-              <p>Recipe</p>
-              <SlArrowRight className="text-2xl" />
-              <p>&nbsp;</p>
+                <StepComponent name="QN" description="Quotation" icon={<BiNews />} />
 
+                <ArrowRight />
+                <StepComponent name="PO" description="Purchase Order" icon={<BiCart />} />
+
+                <ArrowRight />
+                <StepComponent name="GR" description="Good Recipe" icon={<GiStabbedNote />} />
+
+                <ArrowRight />
+                <StepComponent name="INV" description="Invoice" icon={<FaFileInvoiceDollar />} />
+
+                <ArrowRight />
+                <StepComponent name="REC" description="Recipe" icon={<BiBookContent />} />
+
+                <ArrowRight />
+                <StepComponent nextStep name="DONE" description="Finish it!" icon={<AiOutlineFileDone />} />
+
+              </div>
             </div>
           </div>
         </div>
+
+
 
 
         <div className="w-full grid grid-cols-1 gap-4 mb-4">
@@ -128,21 +144,21 @@ export default function Home() {
 
             <div className="flex flex-wrap py-2">
 
-              <div class="w-full md:w-1/2 px-8 my-6">
+              <div class="w-full md:w-1/5 px-8 my-6">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
                   Date
                 </label>
                 <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="date" placeholder="01/01/2022" value="01/01/2022" />
               </div>
 
-              <div class="w-full md:w-1/2 px-8 my-6">
+              <div class="w-full md:w-3/5 px-8 my-6">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
                   disbursement
                 </label>
                 <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="Credit Card" />
               </div>
 
-              <div class="w-full md:w-1/2 px-8 mb-6">
+              <div class="w-full md:w-1/5 px-8 my-6">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
                   Check no
                 </label>

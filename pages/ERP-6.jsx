@@ -7,7 +7,11 @@ import Script from "next/script";
 import React from "react";
 import Select from 'react-tailwindcss-select';
 import { SlArrowRight } from 'react-icons/sl';
-import { AiFillEdit, AiFillDelete, AiFillFileAdd, AiFillSave } from 'react-icons/ai';
+
+import { AiFillEdit, AiFillDelete, AiFillFileAdd, AiFillSave, AiOutlineFileDone } from 'react-icons/ai';
+import { BiBookContent, BiCart, BiNews } from 'react-icons/bi';
+import { GiStabbedNote } from 'react-icons/gi';
+import { FaFileInvoiceDollar } from 'react-icons/fa';
 
 const options = [
   { value: "fox", label: "Fox CO. LTD." },
@@ -90,20 +94,28 @@ export default function Home() {
 
         <div className="w-full grid grid-cols-1 gap-4 mb-4">
           <div className="bg-white shadow rounded-lg p-4 sm:p-6 xl:p-8  2xl:col-span-2">
-            <div className="flex flex-row items-center justify-around">
+            <div>
+              <h1 class="mb-4 text-center font-black text-cyan-700">STEPS</h1>
+              <div class="flex flex-row items-center justify-around">
 
-              <p>Quotation</p>
-              <SlArrowRight className="text-2xl" />
-              <p>&nbsp;</p>
-              <SlArrowRight className="text-2xl" />
-              <p>&nbsp;</p>
-              <SlArrowRight className="text-2xl" />
-              <p>&nbsp;</p>
-              <SlArrowRight className="text-2xl" />
-              <p>&nbsp;</p>
-              <SlArrowRight className="text-2xl" />
-              <p>&nbsp;</p>
+                <StepComponent name="QN" description="Quotation" icon={<BiNews />} />
 
+                <ArrowRight />
+                <StepComponent nextStep name="PO" description="Purchase Order" icon={<BiCart />} />
+
+                <ArrowRight />
+                <StepComponent nextStep name="GR" description="Good Recipe" icon={<GiStabbedNote />} />
+
+                <ArrowRight />
+                <StepComponent nextStep name="INV" description="Invoice" icon={<FaFileInvoiceDollar />} />
+
+                <ArrowRight />
+                <StepComponent nextStep name="REC" description="Recipe" icon={<BiBookContent />} />
+
+                <ArrowRight />
+                <StepComponent nextStep name="DONE" description="Finish it!" icon={<AiOutlineFileDone />} />
+
+              </div>
             </div>
           </div>
         </div>
@@ -301,6 +313,53 @@ export default function Home() {
       <Script src="https://demo.themesberg.com/windster/app.bundle.js"></Script>
     </div >
   );
+
+  function ArrowRight() {
+    return <div class="flex-1 flex items-center justify-center">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M14 2h-7.229l7.014 7h-13.785v6h13.785l-7.014 7h7.229l10-10z" /></svg>
+    </div>;
+  }
+
+  function StepComponent({ name, description, icon, step, nextStep }) {
+    return <div class="w-1/3 text-center px-6">
+      {nextStep ?
+        <div
+          class={`bg-gray-300 rounded-lg items-center justify-center border border-gray-200 flex flex-col`}
+        >
+          <div
+            class={`w-3/3 bg-transparent h-10 flex items-center justify-center icon-step text-gray-600`}
+          >
+            {icon}
+          </div>
+          <div
+            class={`w-3/3 bg-gray-200 h-24 w-full flex flex-col items-center justify-center px-1 body-step rounded-b-lg`}
+          >
+            <h2 class={`font-bold text-sm`}>{name}</h2>
+            <p class={`text-xs text-gray-600`}>
+              ({description})
+            </p>
+          </div>
+        </div>
+        :
+        <div
+          class={`${!step ? 'bg-cyan-700' : 'bg-cyan-500'} rounded-lg items-center justify-center border ${!step ? 'border-cyan-500' : 'border-cyan-200'} flex flex-col`}
+        >
+          <div
+            class={`w-3/3 bg-transparent h-10 flex items-center justify-center icon-step ${!step ? 'text-white' : 'text-gray-600'}`}
+          >
+            {icon}
+          </div>
+          <div
+            class={`w-3/3 ${!step ? 'bg-cyan-500' : 'bg-cyan-200'} h-24 w-full flex flex-col items-center justify-center px-1 body-step rounded-b-lg`}
+          >
+            <h2 class={`font-bold text-sm ${!step ? 'text-white' : 'text-gray-600'}`}>{name}</h2>
+            <p class={`text-xs ${!step ? 'text-white' : 'text-gray-600'}`}>
+              ({description})
+            </p>
+          </div>
+        </div>}
+    </div>;
+  }
 
   function TablePagination() {
     return <div class="overflow-x-auto relative shadow-md sm:rounded-lg">

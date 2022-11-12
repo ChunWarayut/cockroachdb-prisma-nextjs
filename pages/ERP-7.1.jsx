@@ -7,7 +7,12 @@ import Script from "next/script";
 import React from "react";
 import Select from 'react-tailwindcss-select';
 import { SlArrowRight } from 'react-icons/sl';
-import { AiFillEdit, AiFillDelete, AiFillFileAdd, AiFillSave } from 'react-icons/ai';
+import { ArrowRight, StepComponent } from "../components/stepComponent";
+
+import { AiFillEdit, AiFillDelete, AiFillFileAdd, AiFillSave, AiOutlineFileDone } from 'react-icons/ai';
+import { BiBookContent, BiCart, BiNews } from 'react-icons/bi';
+import { GiStabbedNote } from 'react-icons/gi';
+import { FaFileInvoiceDollar } from 'react-icons/fa';
 
 const options = [
   { value: "fox", label: "Fox CO. LTD." },
@@ -90,20 +95,28 @@ export default function Home() {
 
         <div className="w-full grid grid-cols-1 gap-4 mb-4">
           <div className="bg-white shadow rounded-lg p-4 sm:p-6 xl:p-8  2xl:col-span-2">
-            <div className="flex flex-row items-center justify-around">
+            <div>
+              <h1 class="mb-4 text-center font-black text-cyan-700">STEPS</h1>
+              <div class="flex flex-row items-center justify-around">
 
-              <p>Quotation</p>
-              <SlArrowRight className="text-2xl" />
-              <p>&nbsp;</p>
-              <SlArrowRight className="text-2xl" />
-              <p>&nbsp;</p>
-              <SlArrowRight className="text-2xl" />
-              <p>&nbsp;</p>
-              <SlArrowRight className="text-2xl" />
-              <p>&nbsp;</p>
-              <SlArrowRight className="text-2xl" />
-              <p>&nbsp;</p>
+                <StepComponent name="QN" description="Quotation" icon={<BiNews />} />
 
+                <ArrowRight />
+                <StepComponent nextStep name="PO" description="Purchase Order" icon={<BiCart />} />
+
+                <ArrowRight />
+                <StepComponent nextStep name="GR" description="Good Recipe" icon={<GiStabbedNote />} />
+
+                <ArrowRight />
+                <StepComponent nextStep name="INV" description="Invoice" icon={<FaFileInvoiceDollar />} />
+
+                <ArrowRight />
+                <StepComponent nextStep name="REC" description="Recipe" icon={<BiBookContent />} />
+
+                <ArrowRight />
+                <StepComponent nextStep name="DONE" description="Finish it!" icon={<AiOutlineFileDone />} />
+
+              </div>
             </div>
           </div>
         </div>
