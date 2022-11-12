@@ -1,29 +1,20 @@
 import Head from "next/head";
-import { useSession, signIn, signOut } from "next-auth/react";
+import { useSession } from "next-auth/react";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 import DefaultLayout from "../components/default/layout";
 import Script from "next/script";
 import React from "react";
-import Select from 'react-tailwindcss-select';
-import { SlArrowRight } from 'react-icons/sl';
 
 import { AiFillEdit, AiFillDelete, AiFillFileAdd, AiFillSave, AiOutlineFileDone } from 'react-icons/ai';
 import { BiBookContent, BiCart, BiNews } from 'react-icons/bi';
 import { GiStabbedNote } from 'react-icons/gi';
 import { FaFileInvoiceDollar } from 'react-icons/fa';
 
-const options = [
-  { value: "fox", label: "Fox CO. LTD." },
-  { value: "Butterfly", label: "Butterfly CO. LTD." },
-  { value: "Honeybee", label: "Honeybee CO. LTD." },
-];
-
 export default function Home() {
   const { data: session } = useSession();
   const [showModal, setShowModal] = React.useState(false);
   const [showModal2, setShowModal2] = React.useState(false);
-  const [animal, setAnimal] = React.useState(null);
 
   const routes = useRouter();
   useEffect(() => {
@@ -32,58 +23,65 @@ export default function Home() {
     }
   }, [session]);
 
-  const handleChange = (value) => {
-    console.log("value:", value);
-    setAnimal(value);
-  };
-
-  console.log("session", session);
-
   return (
     <div>
       <Head>
-        <title>Create Next App</title>
+        <title>QUOTATION | BlueC ERP</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <DefaultLayout>
+
         <div className="w-full grid grid-cols-1 gap-4 mb-4">
-          <div className="bg-white shadow rounded-lg p-4 sm:p-6 xl:p-8  2xl:col-span-2">
-            <div className="container">
+          <div className="bg-gradient-to-r from-blue-500 to-green-500 relative shadow-lg rounded-lg p-4 sm:p-6 xl:p-8  2xl:col-span-2">
+
+            <div className="">
+              <div className="absolute right-28 bottom-6">
+                <img src="https://demo.themesberg.com/windster/images/logo.svg" className="h-32 transform motion-safe:hover:scale-110 transition hover:rotate-6" alt="BlueC Engineering" />
+              </div>
+              <div className="p-20 absolute rounded-full bg-white opacity-20 bottom-8 -right-20">
+              </div>
+              <div className="p-2 absolute rounded-full bg-white opacity-20 bottom-4 right-20">
+              </div>
+              <div className="p-16 absolute rounded-full bg-white opacity-20 -bottom-12 -left-8">
+              </div>
+              <div className="p-2 absolute rounded-full bg-white opacity-20 top-12 left-4">
+              </div>
+            </div>
+
+            <div className="container ml-16">
 
               <div className="flex flex-row items-center">
-                <h3 className="text-md leading-7 font-medium text-gray-900">
+                <h3 className="text-lg leading-7 font-bold text-white tracking-wide">
                   Project:
                 </h3>
-                <p className="ml-2 text-sm text-gray-500">
+                <p className="ml-2 text-sm text-gray-100">
                   Project description
                 </p>
               </div>
 
-              <div className="grid grid-cols-2 items-center">
-                <div className="flex flex-row items-center">
-                  <h3 className="text-md leading-7 font-medium text-gray-900">
-                    Customer:
-                  </h3>
-                  <p className="ml-2 text-sm text-gray-500">
-                    Customer description
-                  </p>
-                </div>
-                <div className="flex flex-row items-center">
-                  <h3 className="text-md leading-7 font-medium text-gray-900">
-                    Supplier:
-                  </h3>
-                  <p className="ml-2 text-sm text-gray-500">
-                    Supplier description
-                  </p>
-                </div>
+              <div className="flex flex-row items-center">
+                <h3 className="text-lg leading-7 font-bold text-white tracking-wide">
+                  Customer:
+                </h3>
+                <p className="ml-2 text-sm text-gray-100">
+                  Customer description
+                </p>
+              </div>
+              <div className="flex flex-row items-center">
+                <h3 className="text-lg leading-7 font-bold text-white tracking-wide">
+                  Supplier:
+                </h3>
+                <p className="ml-2 text-sm text-gray-100">
+                  Supplier description
+                </p>
               </div>
 
               <div className="flex flex-row items-center">
-                <h3 className="text-md leading-7 font-medium text-gray-900">
+                <h3 className="text-lg leading-7 font-bold text-white tracking-wide">
                   Detail:
                 </h3>
-                <p className="ml-2 text-sm text-gray-500">
+                <p className="ml-2 text-sm text-gray-100">
                   Detail description
                 </p>
               </div>
