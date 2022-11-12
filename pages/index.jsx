@@ -58,42 +58,55 @@ export default function Home() {
           </div>
         </div> */}
         <div className="w-full grid grid-cols-1 gap-4 mb-4">
-          <div className="bg-white shadow rounded-lg p-4 sm:p-6 xl:p-8  2xl:col-span-2">
-            <div className="container">
+          <div className="bg-gradient-to-r from-blue-500 to-green-500 relative shadow-lg rounded-lg p-4 sm:p-6 xl:p-8  2xl:col-span-2">
+            
+            <div className="">
+              <div className="absolute right-28 bottom-6">
+                <img src="https://demo.themesberg.com/windster/images/logo.svg" className="h-32 transform motion-safe:hover:scale-110 transition hover:rotate-6" alt="BlueC Engineering"/>
+              </div>
+                <div className="p-20 absolute rounded-full bg-white opacity-20 bottom-8 -right-20">
+                </div>
+                <div className="p-2 absolute rounded-full bg-white opacity-20 bottom-4 right-20">
+                </div>
+                <div className="p-16 absolute rounded-full bg-white opacity-20 -bottom-12 -left-8">
+                </div>
+                <div className="p-2 absolute rounded-full bg-white opacity-20 top-12 left-4">
+                </div>
+              </div>
+
+            <div className="container ml-16">
 
               <div className="flex flex-row items-center">
-                <h3 className="text-md leading-7 font-medium text-gray-900">
+                <h3 className="text-lg leading-7 font-bold text-white tracking-wide">
                   Project:
                 </h3>
-                <p className="ml-2 text-sm text-gray-500">
+                <p className="ml-2 text-sm text-gray-100">
                   Project description
                 </p>
               </div>
 
-              <div className="grid grid-cols-2 items-center">
-                <div className="flex flex-row items-center">
-                  <h3 className="text-md leading-7 font-medium text-gray-900">
-                    Customer:
-                  </h3>
-                  <p className="ml-2 text-sm text-gray-500">
-                    Customer description
-                  </p>
-                </div>
-                <div className="flex flex-row items-center">
-                  <h3 className="text-md leading-7 font-medium text-gray-900">
-                    Supplier:
-                  </h3>
-                  <p className="ml-2 text-sm text-gray-500">
-                    Supplier description
-                  </p>
-                </div>
+              <div className="flex flex-row items-center">
+                <h3 className="text-lg leading-7 font-bold text-white tracking-wide">
+                  Customer:
+                </h3>
+                <p className="ml-2 text-sm text-gray-100">
+                  Customer description
+                </p>
+              </div>
+              <div className="flex flex-row items-center">
+                <h3 className="text-lg leading-7 font-bold text-white tracking-wide">
+                  Supplier:
+                </h3>
+                <p className="ml-2 text-sm text-gray-100">
+                  Supplier description
+                </p>
               </div>
 
               <div className="flex flex-row items-center">
-                <h3 className="text-md leading-7 font-medium text-gray-900">
+                <h3 className="text-lg leading-7 font-bold text-white tracking-wide">
                   Detail:
                 </h3>
-                <p className="ml-2 text-sm text-gray-500">
+                <p className="ml-2 text-sm text-gray-100">
                   Detail description
                 </p>
               </div>
@@ -121,7 +134,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-
 
         <div className="w-full grid grid-cols-1 gap-4 mb-4">
           <div className="bg-white shadow rounded-lg p-4 sm:p-6 xl:p-8  2xl:col-span-2">
@@ -195,7 +207,7 @@ export default function Home() {
             <div className="w-full gap-4 flex items-center justify-center">
               <img src="https://www.dearcowboy.com/static/image/postimage/library366/01.jpg" />
             </div>
-{/* 
+            {/* 
             <div class="w-full md:w-2/2 px-8 mt-6">
               <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
                 Comments
