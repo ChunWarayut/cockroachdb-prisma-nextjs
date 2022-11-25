@@ -21,7 +21,7 @@ export default function Home() {
   const routes = useRouter();
   useEffect(() => {
     if (!session) {
-      routes.push("/login");
+      // routes.push("/login");
     }
   }, [session]);
 
@@ -156,8 +156,11 @@ export default function Home() {
             <div className="w-full gap-4 mb-4 flex items-center justify-start">
               <h1 className="text-2xl">Invoice Recipe</h1>
             </div>
-            <div className="w-full gap-4 flex items-center justify-center">
-              <img src="https://www.dearcowboy.com/static/image/postimage/library366/01.jpg" />
+            <div className="w-full pb-4 gap-4 flex items-center justify-center">
+
+              <iframe src="/pdf/po.pdf#toolbar=0" width="100%" height="1066px">
+              </iframe>
+
             </div>
             <div class="w-full md:w-3/3 px-8">
               <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">

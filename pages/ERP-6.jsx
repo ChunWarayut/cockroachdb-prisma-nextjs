@@ -19,7 +19,7 @@ export default function Home() {
   const routes = useRouter();
   useEffect(() => {
     if (!session) {
-      routes.push("/login");
+      // routes.push("/login");
     }
   }, [session]);
 
@@ -177,7 +177,7 @@ export default function Home() {
           {showModal ? (
             <>
               <div
-                className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
+                className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-30 outline-none focus:outline-none"
               >
                 <div className="relative w-auto my-6 mx-auto max-w-3xl">
                   {/*content*/}
@@ -235,7 +235,7 @@ export default function Home() {
                       <button
                         className="bg-cyan-600 text-white active:bg-cyan-700 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                         type="button"
-                        onClick={() => setShowModal(false)}
+                        onClick={() => setShowModal2(true)}
                       >
                         Save
                       </button>
@@ -243,7 +243,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
+              <div className="opacity-25 fixed inset-0 z-20 bg-black"></div>
             </>
           ) : null}
         </>

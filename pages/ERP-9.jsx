@@ -21,7 +21,7 @@ export default function Home() {
   const routes = useRouter();
   useEffect(() => {
     if (!session) {
-      routes.push("/login");
+      // routes.push("/login");
     }
   }, [session]);
 
@@ -152,7 +152,11 @@ export default function Home() {
         <div className="w-full grid grid-cols-1 gap-4 mb-4">
           <div className="bg-white shadow rounded-lg">
             <div className="w-full gap-4 mb-4 flex items-center justify-center">
-              <img src="https://www.dearcowboy.com/static/image/postimage/library366/01.jpg" />
+
+
+              <iframe src="/pdf/po.pdf#toolbar=0" width="100%" height="1066px">
+              </iframe>
+
             </div>
           </div>
         </div>

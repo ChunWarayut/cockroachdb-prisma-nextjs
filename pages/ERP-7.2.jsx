@@ -22,7 +22,7 @@ export default function Home() {
   const routes = useRouter();
   useEffect(() => {
     if (!session) {
-      routes.push("/login");
+      // routes.push("/login");
     }
   }, [session]);
 
