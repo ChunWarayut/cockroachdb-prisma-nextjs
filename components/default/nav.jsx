@@ -86,7 +86,7 @@ export default function DefaultNav() {
                   clipRule="evenodd"
                 ></path>
               </svg>
-              ออกจากระบบ
+              LOGOUT
             </button>
           </div>
         </div>

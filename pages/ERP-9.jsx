@@ -8,7 +8,7 @@ import React from "react";
 
 import { ArrowRight, StepComponent } from "../components/stepComponent";
 
-import { AiFillEdit, AiFillDelete, AiFillSave, AiOutlineFileDone } from 'react-icons/ai';
+import { AiFillEdit, AiFillDelete, AiFillSave, AiOutlineFileDone, AiFillFilePdf } from 'react-icons/ai';
 import { BiBookContent, BiCart, BiNews } from 'react-icons/bi';
 import { GiStabbedNote } from 'react-icons/gi';
 import { FaFileInvoiceDollar } from 'react-icons/fa';
@@ -113,6 +113,18 @@ export default function Home() {
                 </p>
               </div>
 
+              <div className="flex flex-row items-center">
+                <h3 className="text-lg leading-7 font-bold text-white tracking-wide">
+                  Attachments:
+                </h3>
+                <p className="ml-2 text-xl text-gray-100">
+                  <AiFillFilePdf />
+                </p>
+                <p className="ml-1 text-sm text-gray-100">
+                  Attachments description
+                </p>
+              </div>
+
             </div>
           </div>
         </div>
@@ -128,14 +140,13 @@ export default function Home() {
                 <ArrowRight />
                 <StepComponent name="PO" description="Purchase Order" icon={<BiCart />} />
 
-                <ArrowRight />
-                <StepComponent nextStep name="GR" description="Good Recipe" icon={<GiStabbedNote />} />
+
 
                 <ArrowRight />
                 <StepComponent nextStep name="INV" description="Invoice" icon={<FaFileInvoiceDollar />} />
 
                 <ArrowRight />
-                <StepComponent nextStep name="REC" description="Recipe" icon={<BiBookContent />} />
+                <StepComponent nextStep name="REC" description="Receipt" icon={<BiBookContent />} />
 
                 <ArrowRight />
                 <StepComponent nextStep name="DONE" description="Finish it!" icon={<AiOutlineFileDone />} />
@@ -165,7 +176,7 @@ export default function Home() {
         <div class="flex flex-wrap -mx-3 mb-2">
           <div class="w-full md:w-3/3 px-3 mb-6 md:mb-0">
             <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
-              Upload File
+              Attach Files
             </label>
 
             <div class="flex justify-center items-center w-full">
@@ -185,6 +196,18 @@ export default function Home() {
 
         <div className="flex flex-row items-center">
 
+          <div className="w-full gap-4 mb-4 flex items-center justify-start">
+            <div>
+              <button
+                name="create"
+                value="create"
+                onClick={() => setShowModal2(true)}
+                className="hidden sm:inline-flex ml-5 text-white bg-rose-700 hover:bg-rose-700 focus:ring-4 focus:ring-rose-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center items-center mr-3"
+              >
+                BACK
+              </button>
+            </div>
+          </div>
 
           <div className="w-full gap-4 mb-4 flex items-center justify-end">
 
@@ -250,7 +273,7 @@ export default function Home() {
                           </div>
                           <div class="w-full md:w-2/2 px-3">
                             <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
-                              Comments
+                              Details
                             </label>
                             <textarea class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="Doe"> </textarea>
                           </div>

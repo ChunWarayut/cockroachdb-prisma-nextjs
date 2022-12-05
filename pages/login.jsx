@@ -9,7 +9,7 @@ export default function SignIn({ csrfToken }) {
   const { data: session } = useSession();
   useEffect(() => {
     if (session?.expires) {
-      router.push("/");
+      // router.push("/");
     }
   }, []);
 
@@ -24,16 +24,34 @@ export default function SignIn({ csrfToken }) {
                 "url(https://images.unsplash.com/photo-1616763355603-9755a640a287?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80)",
             }}
           >
-            <div className="flex items-center h-full px-20 bg-gray-900 bg-opacity-40">
+            <div className="flex items-end h-full px-20 pb-20 bg-gray-900 bg-opacity-40">
               <div>
                 <h2 className="text-4xl font-bold text-white">
                   บริษัท บลูซี เอ็นจิเนียริ่ง จำกัด
                 </h2>
 
-                <p className="max-w-xl mt-3 text-gray-300">
-                  BlueC Engineering CO.,LTD. 29/196 หมู่ 3 ซ.อัจฉริยะพัฒนา
-                  ถ.กายจนาภิเษก ต.ปลายบาง อ.บางกรวย จ.นนทบุรี 11130 โทร
-                  66-8-1618-1053
+                <p className="mt-3 text-gray-300">
+                  BlueC Engineering Co.,Ltd.
+                </p>
+
+                <p className="mt-3 text-gray-300">
+                  29/196 หมู่ 3 ซ.อัจฉริยะพัฒนา ถ.กายจนาภิเษก ต.ปลายบาง อ.บางกรวย จ.นนทบุรี  11130
+                </p>
+
+                <p className="mt-3 text-gray-300">
+                  29/196 Moo 3 T. Plaibang, A. Bangkruy, Nonthaburi 11130
+                </p>
+
+                <p className="mt-3 text-gray-300">
+                  TEL :  081-6181053
+                </p>
+
+                <p className="mt-3 text-gray-300">
+                  Email : marutsuralert@hotmail.com
+                </p>
+
+                <p className="mt-3 text-gray-300">
+                  เลขประจำตัวผู้เสียภาษีอากร 	: 0125555015738
                 </p>
               </div>
             </div>

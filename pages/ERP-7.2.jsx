@@ -8,9 +8,9 @@ import React from "react";
 
 import { ArrowRight, StepComponent } from "../components/stepComponent";
 
-import { AiFillEdit, AiFillDelete, AiFillSave, AiOutlineFileDone } from 'react-icons/ai';
+import { AiFillEdit, AiFillDelete, AiFillSave, AiOutlineFileDone, AiFillFilePdf, AiFillFileAdd } from 'react-icons/ai';
 import { BiBookContent, BiCart, BiNews } from 'react-icons/bi';
-import { GiStabbedNote } from 'react-icons/gi';
+import { VscPreview } from 'react-icons/vsc';
 import { FaFileInvoiceDollar } from 'react-icons/fa';
 
 
@@ -89,6 +89,18 @@ export default function Home() {
                 </p>
               </div>
 
+              <div className="flex flex-row items-center">
+                <h3 className="text-lg leading-7 font-bold text-white tracking-wide">
+                  Attachments:
+                </h3>
+                <p className="ml-2 text-xl text-gray-100">
+                  <AiFillFilePdf />
+                </p>
+                <p className="ml-1 text-sm text-gray-100">
+                  Attachments description
+                </p>
+              </div>
+
             </div>
           </div>
         </div>
@@ -104,14 +116,13 @@ export default function Home() {
                 <ArrowRight />
                 <StepComponent nextStep name="PO" description="Purchase Order" icon={<BiCart />} />
 
-                <ArrowRight />
-                <StepComponent nextStep name="GR" description="Good Recipe" icon={<GiStabbedNote />} />
+
 
                 <ArrowRight />
                 <StepComponent nextStep name="INV" description="Invoice" icon={<FaFileInvoiceDollar />} />
 
                 <ArrowRight />
-                <StepComponent nextStep name="REC" description="Recipe" icon={<BiBookContent />} />
+                <StepComponent nextStep name="REC" description="Receipt" icon={<BiBookContent />} />
 
                 <ArrowRight />
                 <StepComponent nextStep name="DONE" description="Finish it!" icon={<AiOutlineFileDone />} />
@@ -129,14 +140,14 @@ export default function Home() {
 
             <div className="flex flex-row items-end justify-between py-2">
 
-              <div class="w-full md:w-2/2 px-3">
+              <div class="w-full md:w-1/2 px-3">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
                   Date
                 </label>
                 <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="date" placeholder="01/01/2022" value="01/01/2022" />
               </div>
 
-              <div class="w-full md:w-2/2 px-3">
+              {/* <div class="w-full md:w-2/2 px-3">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
                   Supplier
                 </label>
@@ -147,7 +158,7 @@ export default function Home() {
                   <option value="FR">France</option>
                   <option value="DE">Germany</option>
                 </select>
-              </div>
+              </div> */}
               <div class="">
                 <button
                   name="create"
@@ -155,7 +166,7 @@ export default function Home() {
                   onClick={() => setShowModal2(true)}
                   className="whitespace-nowrap hidden sm:inline-flex ml-5 text-white bg-cyan-600 hover:bg-cyan-700 focus:ring-4 focus:ring-cyan-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center items-center mr-3"
                 >
-                  ADD
+                 <AiFillFileAdd />&nbsp; ADD ITEM
                 </button>
               </div>
 
@@ -245,7 +256,7 @@ export default function Home() {
                           </div>
                           <div class="w-full md:w-2/2 px-3">
                             <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
-                              Comments
+                              Details
                             </label>
                             <textarea class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="Doe"> </textarea>
                           </div>
@@ -342,16 +353,17 @@ export default function Home() {
     </div >
   );
 
+
   function TablePagination() {
-    return <div class="overflow-x-auto relative shadow-md sm:rounded-lg mt-2">
+    return <div class="overflow-x-auto relative shadow-md sm:rounded-lg">
       <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
         <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
           <tr>
             <th scope="col" class="py-3 px-6">
-              code
+              item code
             </th>
             <th scope="col" class="py-3 px-6">
-              name
+              item name
             </th>
             <th scope="col" class="py-3 px-6">
               qty
@@ -360,13 +372,13 @@ export default function Home() {
               unit price
             </th>
             <th scope="col" class="py-3 px-6">
-              amount
+              total price
             </th>
             <th scope="col" class="py-3 px-6">
-              comment
+              details
             </th>
             <th scope="col" class="py-3 px-6">
-              จัดการ
+
             </th>
           </tr>
         </thead>
@@ -376,9 +388,9 @@ export default function Home() {
               scope="row"
               class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
             >
-              Apple MacBook Pro 17"
+              X001
             </th>
-            <td class="py-4 px-6">Sliver</td>
+            <td class="py-4 px-6">item 1</td>
             <td class="py-4 px-6">10</td>
             <td class="py-4 px-6">200</td>
             <td class="py-4 px-6">2000</td>
@@ -387,6 +399,12 @@ export default function Home() {
               <a
                 href="#"
                 class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline"
+              >
+                <VscPreview />
+              </a>
+              <a
+                href="#"
+                class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline ml-2"
               >
                 <AiFillEdit />
               </a>
@@ -403,9 +421,9 @@ export default function Home() {
               scope="row"
               class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
             >
-              Apple MacBook Pro 17"
+              X002
             </th>
-            <td class="py-4 px-6">Sliver</td>
+            <td class="py-4 px-6">item 2</td>
             <td class="py-4 px-6">10</td>
             <td class="py-4 px-6">200</td>
             <td class="py-4 px-6">2000</td>
@@ -414,6 +432,12 @@ export default function Home() {
               <a
                 href="#"
                 class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline"
+              >
+                <VscPreview />
+              </a>
+              <a
+                href="#"
+                class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline ml-2"
               >
                 <AiFillEdit />
               </a>
@@ -430,9 +454,9 @@ export default function Home() {
               scope="row"
               class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
             >
-              Apple MacBook Pro 17"
+              X003
             </th>
-            <td class="py-4 px-6">Sliver</td>
+            <td class="py-4 px-6">item 3</td>
             <td class="py-4 px-6">10</td>
             <td class="py-4 px-6">200</td>
             <td class="py-4 px-6">2000</td>
@@ -441,6 +465,12 @@ export default function Home() {
               <a
                 href="#"
                 class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline"
+              >
+                <VscPreview />
+              </a>
+              <a
+                href="#"
+                class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline ml-2"
               >
                 <AiFillEdit />
               </a>
@@ -457,9 +487,9 @@ export default function Home() {
               scope="row"
               class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
             >
-              Apple MacBook Pro 17"
+              X004
             </th>
-            <td class="py-4 px-6">Sliver</td>
+            <td class="py-4 px-6">item 4</td>
             <td class="py-4 px-6">10</td>
             <td class="py-4 px-6">200</td>
             <td class="py-4 px-6">2000</td>
@@ -468,6 +498,12 @@ export default function Home() {
               <a
                 href="#"
                 class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline"
+              >
+                <VscPreview />
+              </a>
+              <a
+                href="#"
+                class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline ml-2"
               >
                 <AiFillEdit />
               </a>
@@ -484,9 +520,9 @@ export default function Home() {
               scope="row"
               class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
             >
-              Apple MacBook Pro 17"
+              X005
             </th>
-            <td class="py-4 px-6">Sliver</td>
+            <td class="py-4 px-6">item 5</td>
             <td class="py-4 px-6">10</td>
             <td class="py-4 px-6">200</td>
             <td class="py-4 px-6">2000</td>
@@ -495,6 +531,12 @@ export default function Home() {
               <a
                 href="#"
                 class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline"
+              >
+                <VscPreview />
+              </a>
+              <a
+                href="#"
+                class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline ml-2"
               >
                 <AiFillEdit />
               </a>
@@ -511,9 +553,9 @@ export default function Home() {
               scope="row"
               class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
             >
-              Apple MacBook Pro 17"
+              X006
             </th>
-            <td class="py-4 px-6">Sliver</td>
+            <td class="py-4 px-6">item 6</td>
             <td class="py-4 px-6">10</td>
             <td class="py-4 px-6">200</td>
             <td class="py-4 px-6">2000</td>
@@ -522,6 +564,12 @@ export default function Home() {
               <a
                 href="#"
                 class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline"
+              >
+                <VscPreview />
+              </a>
+              <a
+                href="#"
+                class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline ml-2"
               >
                 <AiFillEdit />
               </a>

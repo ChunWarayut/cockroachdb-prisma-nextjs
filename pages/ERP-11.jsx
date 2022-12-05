@@ -6,7 +6,7 @@ import DefaultLayout from "../components/default/layout";
 import Script from "next/script";
 import React from "react";
 
-import { AiFillEdit, AiFillDelete, AiFillSave, AiOutlineFileDone } from 'react-icons/ai';
+import { AiFillEdit, AiFillDelete, AiFillSave, AiOutlineFileDone, AiFillFilePdf } from 'react-icons/ai';
 import { BiBookContent, BiCart, BiNews } from 'react-icons/bi';
 import { GiStabbedNote } from 'react-icons/gi';
 import { FaFileInvoiceDollar } from 'react-icons/fa';
@@ -87,6 +87,18 @@ export default function Home() {
                 </p>
               </div>
 
+              <div className="flex flex-row items-center">
+                <h3 className="text-lg leading-7 font-bold text-white tracking-wide">
+                  Attachments:
+                </h3>
+                <p className="ml-2 text-xl text-gray-100">
+                  <AiFillFilePdf />
+                </p>
+                <p className="ml-1 text-sm text-gray-100">
+                  Attachments description
+                </p>
+              </div>
+
             </div>
           </div>
         </div>
@@ -103,14 +115,12 @@ export default function Home() {
                 <ArrowRight />
                 <StepComponent name="PO" description="Purchase Order" icon={<BiCart />} />
 
-                <ArrowRight />
-                <StepComponent name="GR" description="Good Recipe" icon={<GiStabbedNote />} />
 
                 <ArrowRight />
                 <StepComponent nextStep name="INV" description="Invoice" icon={<FaFileInvoiceDollar />} />
 
                 <ArrowRight />
-                <StepComponent nextStep name="REC" description="Recipe" icon={<BiBookContent />} />
+                <StepComponent nextStep name="REC" description="Receipt" icon={<BiBookContent />} />
 
                 <ArrowRight />
                 <StepComponent nextStep name="DONE" description="Finish it!" icon={<AiOutlineFileDone />} />
@@ -134,14 +144,14 @@ export default function Home() {
 
               <div class="w-full md:w-2/2 px-8 mt-6">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
-                  Comments
+                  Details
                 </label>
                 <textarea class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="Doe"> </textarea>
               </div>
 
               <div class="w-full md:w-3/3 px-8 my-6">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
-                  Upload File
+                  Attach Files
                 </label>
 
                 <div class="flex justify-center items-center w-full">
@@ -225,7 +235,7 @@ export default function Home() {
                           </div>
                           <div class="w-full md:w-2/2 px-3">
                             <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
-                              Comments
+                              Details
                             </label>
                             <textarea class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="Doe"> </textarea>
                           </div>

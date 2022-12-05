@@ -9,9 +9,9 @@ import Select from 'react-tailwindcss-select';
 import { SlArrowRight } from 'react-icons/sl';
 import { ArrowRight, StepComponent } from "../components/stepComponent";
 
-import { AiFillEdit, AiFillDelete, AiFillFileAdd, AiFillSave, AiOutlineFileDone } from 'react-icons/ai';
+import { AiFillEdit, AiFillDelete, AiFillFileAdd, AiFillSave, AiOutlineFileDone, AiFillFilePdf } from 'react-icons/ai';
 import { BiBookContent, BiCart, BiNews } from 'react-icons/bi';
-import { GiStabbedNote } from 'react-icons/gi';
+import { VscPreview } from 'react-icons/vsc';
 import { FaFileInvoiceDollar } from 'react-icons/fa';
 
 const options = [
@@ -103,6 +103,18 @@ export default function Home() {
                 </p>
               </div>
 
+              <div className="flex flex-row items-center">
+                <h3 className="text-lg leading-7 font-bold text-white tracking-wide">
+                  Attachments:
+                </h3>
+                <p className="ml-2 text-xl text-gray-100">
+                  <AiFillFilePdf />
+                </p>
+                <p className="ml-1 text-sm text-gray-100">
+                  Attachments description
+                </p>
+              </div>
+
             </div>
           </div>
         </div>
@@ -118,14 +130,13 @@ export default function Home() {
                 <ArrowRight />
                 <StepComponent nextStep name="PO" description="Purchase Order" icon={<BiCart />} />
 
-                <ArrowRight />
-                <StepComponent nextStep name="GR" description="Good Recipe" icon={<GiStabbedNote />} />
+
 
                 <ArrowRight />
                 <StepComponent nextStep name="INV" description="Invoice" icon={<FaFileInvoiceDollar />} />
 
                 <ArrowRight />
-                <StepComponent nextStep name="REC" description="Recipe" icon={<BiBookContent />} />
+                <StepComponent nextStep name="REC" description="Receipt" icon={<BiBookContent />} />
 
                 <ArrowRight />
                 <StepComponent nextStep name="DONE" description="Finish it!" icon={<AiOutlineFileDone />} />
@@ -144,16 +155,17 @@ export default function Home() {
 
               <div class="flex items-center pl-4 rounded">
                 <input id="bordered-checkbox-2" type="checkbox" value="" name="bordered-checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
-                <label for="bordered-checkbox-2" class="py-4 ml-2 w-full text-sm font-medium text-gray-900 dark:text-gray-300 pr-2">Supplier: xxxxxxxxxxxx</label>
+                <label for="bordered-checkbox-2" class="py-4 ml-2 w-full text-sm font-medium text-gray-900 dark:text-gray-300 pr-2">Supplier: Supplier 1</label>
               </div>
               <div class="flex items-center pr-4 rounded">
-                <label for="bordered-checkbox-2" class="py-4 ml-2 w-full text-sm font-medium text-gray-900 dark:text-gray-300 pr-2">Status: xxxxxxxxxxxx</label>
+                <label for="bordered-checkbox-2" class="py-4 ml-2 w-full text-sm font-medium text-gray-900 dark:text-gray-300 pr-2">Status: Finalized</label>
               </div>
             </div>
 
             {TablePagination()}
           </div>
         </div>
+
 
 
         <div className="w-full grid grid-cols-1 gap-4 mb-4">
@@ -163,48 +175,10 @@ export default function Home() {
 
               <div class="flex items-center pl-4 rounded">
                 <input id="bordered-checkbox-2" type="checkbox" value="" name="bordered-checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
-                <label for="bordered-checkbox-2" class="py-4 ml-2 w-full text-sm font-medium text-gray-900 dark:text-gray-300 pr-2">Supplier: xxxxxxxxxxxx</label>
+                <label for="bordered-checkbox-2" class="py-4 ml-2 w-full text-sm font-medium text-gray-900 dark:text-gray-300 pr-2">Supplier: Supplier 2</label>
               </div>
               <div class="flex items-center pr-4 rounded">
-                <label for="bordered-checkbox-2" class="py-4 ml-2 w-full text-sm font-medium text-gray-900 dark:text-gray-300 pr-2">Status: xxxxxxxxxxxx</label>
-              </div>
-            </div>
-
-            {TablePagination()}
-          </div>
-        </div>
-
-
-        <div className="w-full grid grid-cols-1 gap-4 mb-4">
-          <div className="bg-white shadow rounded-lg">
-
-            <div className="flex flex-row items-center justify-between py-2">
-
-              <div class="flex items-center pl-4 rounded">
-                <input id="bordered-checkbox-2" type="checkbox" value="" name="bordered-checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
-                <label for="bordered-checkbox-2" class="py-4 ml-2 w-full text-sm font-medium text-gray-900 dark:text-gray-300 pr-2">Supplier: xxxxxxxxxxxx</label>
-              </div>
-              <div class="flex items-center pr-4 rounded">
-                <label for="bordered-checkbox-2" class="py-4 ml-2 w-full text-sm font-medium text-gray-900 dark:text-gray-300 pr-2">Status: xxxxxxxxxxxx</label>
-              </div>
-            </div>
-
-            {TablePagination()}
-          </div>
-        </div>
-
-
-        <div className="w-full grid grid-cols-1 gap-4 mb-4">
-          <div className="bg-white shadow rounded-lg">
-
-            <div className="flex flex-row items-center justify-between py-2">
-
-              <div class="flex items-center pl-4 rounded">
-                <input id="bordered-checkbox-2" type="checkbox" value="" name="bordered-checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
-                <label for="bordered-checkbox-2" class="py-4 ml-2 w-full text-sm font-medium text-gray-900 dark:text-gray-300 pr-2">Supplier: xxxxxxxxxxxx</label>
-              </div>
-              <div class="flex items-center pr-4 rounded">
-                <label for="bordered-checkbox-2" class="py-4 ml-2 w-full text-sm font-medium text-gray-900 dark:text-gray-300 pr-2">Status: xxxxxxxxxxxx</label>
+                <label for="bordered-checkbox-2" class="py-4 ml-2 w-full text-sm font-medium text-gray-900 dark:text-gray-300 pr-2">Status: Drafts</label>
               </div>
             </div>
 
@@ -221,7 +195,7 @@ export default function Home() {
               onClick={() => setShowModal2(true)}
               className="hidden sm:inline-flex ml-5 text-white bg-cyan-600 hover:bg-cyan-700 focus:ring-4 focus:ring-cyan-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center items-center mr-3"
             >
-              <AiFillSave />&nbsp;บันทึก
+              <AiFillSave />&nbsp;save
             </button>
           </div>
         </div>
@@ -267,7 +241,7 @@ export default function Home() {
                           </div>
                           <div class="w-full md:w-2/2 px-3">
                             <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
-                              Comments
+                              Details
                             </label>
                             <textarea class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="Doe"> </textarea>
                           </div>
@@ -364,16 +338,20 @@ export default function Home() {
     </div >
   );
 
+
   function TablePagination() {
     return <div class="overflow-x-auto relative shadow-md sm:rounded-lg">
       <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
         <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
           <tr>
             <th scope="col" class="py-3 px-6">
-              code
+
             </th>
             <th scope="col" class="py-3 px-6">
-              name
+              item code
+            </th>
+            <th scope="col" class="py-3 px-6">
+              item name
             </th>
             <th scope="col" class="py-3 px-6">
               qty
@@ -382,25 +360,30 @@ export default function Home() {
               unit price
             </th>
             <th scope="col" class="py-3 px-6">
-              amount
+              total price
             </th>
             <th scope="col" class="py-3 px-6">
-              comment
+              details
             </th>
             <th scope="col" class="py-3 px-6">
-              จัดการ
+
             </th>
           </tr>
         </thead>
         <tbody>
           <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-            <th
+            <th>
+              <div class="flex items-center pl-4 rounded">
+                <input id="bordered-checkbox-2" type="checkbox" value="" name="bordered-checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+              </div>
+            </th>
+            <td
               scope="row"
               class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
             >
-              Apple MacBook Pro 17"
-            </th>
-            <td class="py-4 px-6">Sliver</td>
+              X001
+            </td>
+            <td class="py-4 px-6">item 1</td>
             <td class="py-4 px-6">10</td>
             <td class="py-4 px-6">200</td>
             <td class="py-4 px-6">2000</td>
@@ -409,6 +392,12 @@ export default function Home() {
               <a
                 href="#"
                 class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline"
+              >
+                <VscPreview />
+              </a>
+              <a
+                href="#"
+                class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline ml-2"
               >
                 <AiFillEdit />
               </a>
@@ -421,13 +410,18 @@ export default function Home() {
             </td>
           </tr>
           <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-            <th
+            <th>
+              <div class="flex items-center pl-4 rounded">
+                <input id="bordered-checkbox-2" type="checkbox" value="" name="bordered-checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+              </div>
+            </th>
+            <td
               scope="row"
               class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
             >
-              Apple MacBook Pro 17"
-            </th>
-            <td class="py-4 px-6">Sliver</td>
+              X002
+            </td>
+            <td class="py-4 px-6">item 2</td>
             <td class="py-4 px-6">10</td>
             <td class="py-4 px-6">200</td>
             <td class="py-4 px-6">2000</td>
@@ -436,6 +430,12 @@ export default function Home() {
               <a
                 href="#"
                 class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline"
+              >
+                <VscPreview />
+              </a>
+              <a
+                href="#"
+                class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline ml-2"
               >
                 <AiFillEdit />
               </a>
@@ -448,13 +448,18 @@ export default function Home() {
             </td>
           </tr>
           <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-            <th
+            <th>
+              <div class="flex items-center pl-4 rounded">
+                <input id="bordered-checkbox-2" type="checkbox" value="" name="bordered-checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+              </div>
+            </th>
+            <td
               scope="row"
               class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
             >
-              Apple MacBook Pro 17"
-            </th>
-            <td class="py-4 px-6">Sliver</td>
+              X003
+            </td>
+            <td class="py-4 px-6">item 3</td>
             <td class="py-4 px-6">10</td>
             <td class="py-4 px-6">200</td>
             <td class="py-4 px-6">2000</td>
@@ -463,6 +468,12 @@ export default function Home() {
               <a
                 href="#"
                 class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline"
+              >
+                <VscPreview />
+              </a>
+              <a
+                href="#"
+                class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline ml-2"
               >
                 <AiFillEdit />
               </a>
@@ -475,13 +486,18 @@ export default function Home() {
             </td>
           </tr>
           <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-            <th
+            <th>
+              <div class="flex items-center pl-4 rounded">
+                <input id="bordered-checkbox-2" type="checkbox" value="" name="bordered-checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+              </div>
+            </th>
+            <td
               scope="row"
               class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
             >
-              Apple MacBook Pro 17"
-            </th>
-            <td class="py-4 px-6">Sliver</td>
+              X004
+            </td>
+            <td class="py-4 px-6">item 4</td>
             <td class="py-4 px-6">10</td>
             <td class="py-4 px-6">200</td>
             <td class="py-4 px-6">2000</td>
@@ -490,6 +506,12 @@ export default function Home() {
               <a
                 href="#"
                 class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline"
+              >
+                <VscPreview />
+              </a>
+              <a
+                href="#"
+                class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline ml-2"
               >
                 <AiFillEdit />
               </a>
@@ -502,13 +524,18 @@ export default function Home() {
             </td>
           </tr>
           <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-            <th
+            <th>
+              <div class="flex items-center pl-4 rounded">
+                <input id="bordered-checkbox-2" type="checkbox" value="" name="bordered-checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+              </div>
+            </th>
+            <td
               scope="row"
               class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
             >
-              Apple MacBook Pro 17"
-            </th>
-            <td class="py-4 px-6">Sliver</td>
+              X005
+            </td>
+            <td class="py-4 px-6">item 5</td>
             <td class="py-4 px-6">10</td>
             <td class="py-4 px-6">200</td>
             <td class="py-4 px-6">2000</td>
@@ -517,6 +544,12 @@ export default function Home() {
               <a
                 href="#"
                 class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline"
+              >
+                <VscPreview />
+              </a>
+              <a
+                href="#"
+                class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline ml-2"
               >
                 <AiFillEdit />
               </a>
@@ -529,13 +562,18 @@ export default function Home() {
             </td>
           </tr>
           <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-            <th
+            <th>
+              <div class="flex items-center pl-4 rounded">
+                <input id="bordered-checkbox-2" type="checkbox" value="" name="bordered-checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+              </div>
+            </th>
+            <td
               scope="row"
               class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
             >
-              Apple MacBook Pro 17"
-            </th>
-            <td class="py-4 px-6">Sliver</td>
+              X006
+            </td>
+            <td class="py-4 px-6">item 6</td>
             <td class="py-4 px-6">10</td>
             <td class="py-4 px-6">200</td>
             <td class="py-4 px-6">2000</td>
@@ -544,6 +582,12 @@ export default function Home() {
               <a
                 href="#"
                 class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline"
+              >
+                <VscPreview />
+              </a>
+              <a
+                href="#"
+                class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline ml-2"
               >
                 <AiFillEdit />
               </a>

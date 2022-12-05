@@ -8,7 +8,7 @@ import React from "react";
 
 import { ArrowRight, StepComponent } from "../components/stepComponent";
 
-import { AiFillSave, AiOutlineFileDone } from 'react-icons/ai';
+import { AiFillFilePdf, AiFillSave, AiOutlineFileDone } from 'react-icons/ai';
 import { BiBookContent, BiCart, BiNews } from 'react-icons/bi';
 import { GiStabbedNote } from 'react-icons/gi';
 import { FaFileInvoiceDollar } from 'react-icons/fa';
@@ -88,6 +88,18 @@ export default function Home() {
                 </p>
               </div>
 
+              <div className="flex flex-row items-center">
+                <h3 className="text-lg leading-7 font-bold text-white tracking-wide">
+                  Attachments:
+                </h3>
+                <p className="ml-2 text-xl text-gray-100">
+                  <AiFillFilePdf />
+                </p>
+                <p className="ml-1 text-sm text-gray-100">
+                  Attachments description
+                </p>
+              </div>
+
             </div>
           </div>
         </div>
@@ -103,14 +115,12 @@ export default function Home() {
                 <ArrowRight />
                 <StepComponent name="PO" description="Purchase Order" icon={<BiCart />} />
 
-                <ArrowRight />
-                <StepComponent name="GR" description="Good Recipe" icon={<GiStabbedNote />} />
 
                 <ArrowRight />
                 <StepComponent name="INV" description="Invoice" icon={<FaFileInvoiceDollar />} />
 
                 <ArrowRight />
-                <StepComponent name="REC" description="Recipe" icon={<BiBookContent />} />
+                <StepComponent name="REC" description="Receipt" icon={<BiBookContent />} />
 
                 <ArrowRight />
                 <StepComponent nextStep name="DONE" description="Finish it!" icon={<AiOutlineFileDone />} />
@@ -135,27 +145,27 @@ export default function Home() {
 
               <div class="w-full md:w-3/5 px-8 my-6">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
-                  disbursement
+                  Payment Mode
                 </label>
                 <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="Credit Card" />
               </div>
 
               <div class="w-full md:w-1/5 px-8 my-6">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
-                  Check no
+                  Reference No
                 </label>
                 <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="R00001" />
               </div>
               {/* <div class="w-full md:w-2/2 px-8 mt-6">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
-                  Comments
+                  Details
                 </label>
                 <textarea class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="Doe"> </textarea>
               </div> */}
 
               {/* <div class="w-full md:w-3/3 px-8 my-6">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
-                  Upload File
+                  Attach Files
                 </label>
 
                 <div class="flex justify-center items-center w-full">
@@ -182,13 +192,13 @@ export default function Home() {
 
             <div className="w-full gap-4 flex items-center justify-center">
 
-              <iframe src="/pdf/po.pdf#toolbar=0" width="100%" height="1066px">
+              <iframe src="/pdf/rec.pdf#toolbar=0" width="100%" height="1066px">
               </iframe>
 
             </div>
-            <div class="w-full md:w-3/3 px-8">
+            <div class="w-full md:w-3/3 px-8 mt-6">
               <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
-                Upload File
+                Attach Files
               </label>
 
               <div class="flex justify-center items-center w-full">
@@ -212,14 +222,14 @@ export default function Home() {
             <div>
               <div class="flex items-center pl-4 rounded border border-gray-200 dark:border-gray-700">
                 <input checked id="bordered-checkbox-2" type="checkbox" value="" name="bordered-checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
-                <label for="bordered-checkbox-2" class="py-4 ml-2 w-full text-sm font-medium text-gray-900 dark:text-gray-300 pr-2">ปิดโครงการ</label>
+                <label for="bordered-checkbox-2" class="py-4 ml-2 w-full text-sm font-medium text-gray-900 dark:text-gray-300 pr-2">Close</label>
               </div>
             </div>
 
             <div>
               <div class="flex items-center pl-4 rounded border border-gray-200 dark:border-gray-700">
                 <input checked id="bordered-checkbox-2" type="checkbox" value="" name="bordered-checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
-                <label for="bordered-checkbox-2" class="py-4 ml-2 w-full text-sm font-medium text-gray-900 dark:text-gray-300 pr-2">พิมพ์เอกสาร</label>
+                <label for="bordered-checkbox-2" class="py-4 ml-2 w-full text-sm font-medium text-gray-900 dark:text-gray-300 pr-2">Print</label>
               </div>
             </div>
 
@@ -278,7 +288,7 @@ export default function Home() {
                           </div>
                           <div class="w-full md:w-2/2 px-3">
                             <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
-                              Comments
+                              Details
                             </label>
                             <textarea class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="Doe"> </textarea>
                           </div>

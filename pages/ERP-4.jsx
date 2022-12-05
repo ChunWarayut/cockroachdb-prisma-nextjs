@@ -6,6 +6,7 @@ import DefaultLayout from "../components/default/layout";
 import Script from "next/script";
 import React from "react";
 import Select from 'react-tailwindcss-select';
+import { AiFillDelete, AiFillEdit } from "react-icons/ai";
 
 const options = [
   { value: "fox", label: "Fox CO. LTD." },
@@ -67,6 +68,8 @@ export default function Home() {
                 <h1 className="text-2xl font-bold mr-2">Search</h1>
               </div> */}
               <div className="flex-none mr-2">{SelectSupplier()}</div>
+              <div className="flex-none mr-2">{SelectYear()}</div>
+              <div className="flex-none mr-2">{checkboxCloseAndDone()}</div>
               <div className="flex-1 ">{SearchComponent()}</div>
             </div>
           </div>
@@ -129,7 +132,7 @@ export default function Home() {
                         <div class="flex flex-wrap -mx-3 mb-2">
                           <div class="w-full md:w-3/3 px-3 mb-6 md:mb-0">
                             <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
-                              Upload File
+                              Attach Files
                             </label>
 
                             <div class="flex justify-center items-center w-full">
@@ -187,12 +190,19 @@ export default function Home() {
           ) : null}
         </>
 
-      </DefaultLayout>
+      </DefaultLayout >
 
       <Script async defer src="https://buttons.github.io/buttons.js"></Script>
       <Script src="https://demo.themesberg.com/windster/app.bundle.js"></Script>
-    </div>
+    </div >
   );
+
+  function checkboxCloseAndDone() {
+    return <div class="flex items-center pl-4 rounded dark:border-gray-700">
+      <input checked id="bordered-checkbox-2" type="checkbox" value="" name="bordered-checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+      <label for="bordered-checkbox-2" class="py-4 ml-2 w-full text-sm font-medium text-gray-900 dark:text-gray-300 pr-2">Included Close&Done Project</label>
+    </div>;
+  }
 
   function TablePagination() {
     return <div class="overflow-x-auto relative shadow-md sm:rounded-lg">
@@ -200,19 +210,22 @@ export default function Home() {
         <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
           <tr>
             <th scope="col" class="py-3 px-6">
-              ชื่อโครงการ
+              PROJECT name
             </th>
             <th scope="col" class="py-3 px-6">
-              ชื่อลูกค้า
+              Customer
             </th>
             <th scope="col" class="py-3 px-6">
-              รายละเอียด
+              details
             </th>
             <th scope="col" class="py-3 px-6">
-              ผู้ผลิตที่เกี่ยวข้อง
+              Supplier
             </th>
             <th scope="col" class="py-3 px-6">
-              จัดการ
+              Status
+            </th>
+            <th scope="col" class="py-3 px-6">
+
             </th>
           </tr>
         </thead>
@@ -222,23 +235,24 @@ export default function Home() {
               scope="row"
               class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
             >
-              Apple MacBook Pro 17"
+              PROJECT 1
             </th>
             <td class="py-4 px-6">Sliver</td>
             <td class="py-4 px-6">Laptop</td>
             <td class="py-4 px-6">xxx</td>
-            <td class="py-4 px-6">
+            <td class="py-4 px-6">xxx</td>
+            <td class="py-4 px-6 flex items-center justify-start">
               <a
                 href="#"
                 class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline"
               >
-                แก้ไข
+                <AiFillEdit />
               </a>
               <a
                 href="#"
                 class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline ml-2"
               >
-                ลบ
+                <AiFillDelete />
               </a>
             </td>
           </tr>
@@ -247,23 +261,24 @@ export default function Home() {
               scope="row"
               class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
             >
-              Microsoft Surface Pro
+              PROJECT 2
             </th>
             <td class="py-4 px-6">White</td>
             <td class="py-4 px-6">Laptop PC</td>
             <td class="py-4 px-6">xxx</td>
-            <td class="py-4 px-6">
+            <td class="py-4 px-6">xxx</td>
+            <td class="py-4 px-6 flex items-center justify-start">
               <a
                 href="#"
                 class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline"
               >
-                แก้ไข
+                <AiFillEdit />
               </a>
               <a
                 href="#"
                 class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline ml-2"
               >
-                ลบ
+                <AiFillDelete />
               </a>
             </td>
           </tr>
@@ -272,23 +287,24 @@ export default function Home() {
               scope="row"
               class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
             >
-              Magic Mouse 2
+              PROJECT 3
             </th>
             <td class="py-4 px-6">Black</td>
             <td class="py-4 px-6">Accessories</td>
             <td class="py-4 px-6">xxx</td>
-            <td class="py-4 px-6">
+            <td class="py-4 px-6">xxx</td>
+            <td class="py-4 px-6 flex items-center justify-start">
               <a
                 href="#"
                 class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline"
               >
-                แก้ไข
+                <AiFillEdit />
               </a>
               <a
                 href="#"
                 class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline ml-2"
               >
-                ลบ
+                <AiFillDelete />
               </a>
             </td>
           </tr>
@@ -297,23 +313,24 @@ export default function Home() {
               scope="row"
               class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
             >
-              Apple Watch
+              PROJECT 4
             </th>
             <td class="py-4 px-6">Black</td>
             <td class="py-4 px-6">Watches</td>
             <td class="py-4 px-6">xxx</td>
-            <td class="py-4 px-6">
+            <td class="py-4 px-6">xxx</td>
+            <td class="py-4 px-6 flex items-center justify-start">
               <a
                 href="#"
                 class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline"
               >
-                แก้ไข
+                <AiFillEdit />
               </a>
               <a
                 href="#"
                 class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline ml-2"
               >
-                ลบ
+                <AiFillDelete />
               </a>
             </td>
           </tr>
@@ -322,23 +339,24 @@ export default function Home() {
               scope="row"
               class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
             >
-              Apple iMac
+              PROJECT 5
             </th>
             <td class="py-4 px-6">Silver</td>
             <td class="py-4 px-6">PC</td>
             <td class="py-4 px-6">xxx</td>
-            <td class="py-4 px-6">
+            <td class="py-4 px-6">xxx</td>
+            <td class="py-4 px-6 flex items-center justify-start">
               <a
                 href="#"
                 class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline"
               >
-                แก้ไข
+                <AiFillEdit />
               </a>
               <a
                 href="#"
                 class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline ml-2"
               >
-                ลบ
+                <AiFillDelete />
               </a>
             </td>
           </tr>
@@ -347,23 +365,24 @@ export default function Home() {
               scope="row"
               class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
             >
-              Apple AirPods
+              PROJECT 6
             </th>
             <td class="py-4 px-6">White</td>
             <td class="py-4 px-6">Accessories</td>
             <td class="py-4 px-6">xxx</td>
-            <td class="py-4 px-6">
+            <td class="py-4 px-6">xxx</td>
+            <td class="py-4 px-6 flex items-center justify-start">
               <a
                 href="#"
                 class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline"
               >
-                แก้ไข
+                <AiFillEdit />
               </a>
               <a
                 href="#"
                 class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline ml-2"
               >
-                ลบ
+                <AiFillDelete />
               </a>
             </td>
           </tr>
@@ -372,23 +391,24 @@ export default function Home() {
               scope="row"
               class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
             >
-              iPad Pro
+              PROJECT 7
             </th>
             <td class="py-4 px-6">Gold</td>
             <td class="py-4 px-6">Tablet</td>
             <td class="py-4 px-6">xxx</td>
-            <td class="py-4 px-6">
+            <td class="py-4 px-6">xxx</td>
+            <td class="py-4 px-6 flex items-center justify-start">
               <a
                 href="#"
                 class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline"
               >
-                แก้ไข
+                <AiFillEdit />
               </a>
               <a
                 href="#"
                 class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline ml-2"
               >
-                ลบ
+                <AiFillDelete />
               </a>
             </td>
           </tr>
@@ -497,6 +517,30 @@ export default function Home() {
     </div>;
   }
 
+  function SelectYear() {
+    return (
+      <div className="flex flex-row items-center">
+        {/* <h1 className="text-2xl font-bold mr-2">Supplier</h1> */}
+        <div class="inline-block relative w-64">
+          <select class="block appearance-none w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-cyan-500 focus:border-cyan-500 pr-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-cyan-500 dark:focus:border-cyan-500">
+            <option>Year</option>
+            <option>2022</option>
+            <option>2019</option>
+            <option>2018</option>
+          </select>
+          <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+            <svg
+              class="fill-current h-4 w-4"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+            >
+              <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
   function SelectSupplier() {
     return (
       <div className="flex flex-row items-center">
@@ -553,10 +597,10 @@ export default function Home() {
         </div>
         <button
           type="submit"
-          class="p-2.5 ml-2 text-sm font-medium text-white bg-cyan-600 rounded-lg border border-cyan-700 hover:bg-cyan-800 focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:bg-cyan-600 dark:hover:bg-cyan-700 dark:focus:ring-cyan-800"
+          class="flex flex-row p-2.5 ml-2 text-sm font-medium text-white bg-cyan-600 rounded-lg border border-cyan-700 hover:bg-cyan-800 focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:bg-cyan-600 dark:hover:bg-cyan-700 dark:focus:ring-cyan-800"
         >
           <svg
-            class="w-5 h-5"
+            className="w-5 h-5 mr-2"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -570,6 +614,7 @@ export default function Home() {
             ></path>
           </svg>
           <span class="sr-only">Search</span>
+          Search
         </button>
       </form>
     );

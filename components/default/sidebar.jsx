@@ -1,5 +1,10 @@
 import Script from "next/script";
 import { SIDEBAR } from "./data";
+import { BiUser } from 'react-icons/bi';
+import { FiUsers } from 'react-icons/fi';
+import { TbBuildingFactory2 } from 'react-icons/tb';
+import { FaRegLightbulb } from 'react-icons/fa';
+
 
 export default function DefaultSidebar() {
   return (
@@ -10,8 +15,8 @@ export default function DefaultSidebar() {
     >
       <div className="relative flex-1 flex flex-col min-h-0 border-r border-gray-200 bg-white pt-0">
         <div className="flex-1 flex flex-col pt-5 pb-4 overflow-y-auto">
-          <div className="flex-1 px-3 bg-white divide-y space-y-1">
-            <ul className="space-y-2 pb-2">
+          <div className="flex-1 px-3 bg-white space-y-1">
+            <ul className="space-y-2">
               {SIDEBAR.map((item, index) => (
                 <li key={index}>
                   <a
@@ -24,6 +29,43 @@ export default function DefaultSidebar() {
                 </li>
               ))}
             </ul>
+
+            <ul className="pb-2">
+                <li>
+                  <a
+                    className="text-base text-gray-900 font-normal rounded-lg flex items-center p-2 hover:bg-gray-100 group ml-10"
+                  >
+                    <BiUser />
+                    <span className="ml-3">USER</span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="text-base text-gray-900 font-normal rounded-lg flex items-center p-2 hover:bg-gray-100 group ml-10"
+                  >
+                    <FiUsers />
+                    <span className="ml-3">CUSTOMER</span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="text-base text-gray-900 font-normal rounded-lg flex items-center p-2 hover:bg-gray-100 group ml-10"
+                  >
+                    <TbBuildingFactory2 />
+                    <span className="ml-3">SUPPLIER</span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="text-base text-gray-900 font-normal rounded-lg flex items-center p-2 hover:bg-gray-100 group ml-10"
+                  >
+                    <FaRegLightbulb />
+                    <span className="ml-3">ITEM</span>
+                  </a>
+                </li>
+            </ul>
+
+
             {/* <div className="space-y-2 pt-2">
               <bottom
                 className="text-base text-gray-900 font-normal rounded-lg hover:bg-gray-100 group transition duration-75 flex items-center p-2"
