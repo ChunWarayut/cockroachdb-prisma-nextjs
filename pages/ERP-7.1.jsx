@@ -122,8 +122,8 @@ export default function Home() {
         <div className="w-full grid grid-cols-1 gap-4 mb-4">
           <div className="bg-white shadow rounded-lg p-4 sm:p-6 xl:p-8  2xl:col-span-2">
             <div>
-              <h1 class="mb-4 text-center font-black text-cyan-700">STEPS</h1>
-              <div class="flex flex-row items-center justify-around">
+              <h1 className="mb-4 text-center font-black text-cyan-700">STEPS</h1>
+              <div className="flex flex-row items-center justify-around">
 
                 <StepComponent name="QN" description="Quotation" icon={<BiNews />} />
 
@@ -153,12 +153,12 @@ export default function Home() {
 
             <div className="flex flex-row items-center justify-between py-2">
 
-              <div class="flex items-center pl-4 rounded">
-                <input id="bordered-checkbox-2" type="checkbox" value="" name="bordered-checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
-                <label for="bordered-checkbox-2" class="py-4 ml-2 w-full text-sm font-medium text-gray-900 dark:text-gray-300 pr-2">Supplier: Supplier 1</label>
+              <div className="flex items-center pl-4 rounded">
+                <input id="bordered-checkbox-2" type="checkbox" value="" name="bordered-checkbox" className="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+                <label for="bordered-checkbox-2" className="py-4 ml-2 w-full text-sm font-medium text-gray-900 dark:text-gray-300 pr-2">Supplier: Supplier 1</label>
               </div>
-              <div class="flex items-center pr-4 rounded">
-                <label for="bordered-checkbox-2" class="py-4 ml-2 w-full text-sm font-medium text-gray-900 dark:text-gray-300 pr-2">Status: Finalized</label>
+              <div className="flex items-center pr-4 rounded">
+                <label for="bordered-checkbox-2" className="py-4 ml-2 w-full text-sm font-medium text-gray-900 dark:text-gray-300 pr-2">Status: Finalized</label>
               </div>
             </div>
 
@@ -173,12 +173,12 @@ export default function Home() {
 
             <div className="flex flex-row items-center justify-between py-2">
 
-              <div class="flex items-center pl-4 rounded">
-                <input id="bordered-checkbox-2" type="checkbox" value="" name="bordered-checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
-                <label for="bordered-checkbox-2" class="py-4 ml-2 w-full text-sm font-medium text-gray-900 dark:text-gray-300 pr-2">Supplier: Supplier 2</label>
+              <div className="flex items-center pl-4 rounded">
+                <input id="bordered-checkbox-2" type="checkbox" value="" name="bordered-checkbox" className="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+                <label for="bordered-checkbox-2" className="py-4 ml-2 w-full text-sm font-medium text-gray-900 dark:text-gray-300 pr-2">Supplier: Supplier 2</label>
               </div>
-              <div class="flex items-center pr-4 rounded">
-                <label for="bordered-checkbox-2" class="py-4 ml-2 w-full text-sm font-medium text-gray-900 dark:text-gray-300 pr-2">Status: Drafts</label>
+              <div className="flex items-center pr-4 rounded">
+                <label for="bordered-checkbox-2" className="py-4 ml-2 w-full text-sm font-medium text-gray-900 dark:text-gray-300 pr-2">Status: Drafts</label>
               </div>
             </div>
 
@@ -212,38 +212,38 @@ export default function Home() {
                     {/*body*/}
                     <div className="relative p-6 flex-auto">
 
-                      <form class="w-full max-w-lg">
-                        <div class="flex flex-wrap -mx-3 mb-6">
-                          <div class="w-full md:w-2/2 px-3 mb-6">
-                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
+                      <form className="w-full max-w-lg">
+                        <div className="flex flex-wrap -mx-3 mb-6">
+                          <div className="w-full md:w-2/2 px-3 mb-6">
+                            <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
                               Name
                             </label>
-                            <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="Jane" />
-                            <p class="text-red-500 text-xs italic">Please fill out this field.</p>
+                            <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="Jane" />
+                            <p className="text-red-500 text-xs italic">Please fill out this field.</p>
                           </div>
-                          <div class="w-full md:w-2/2 px-3 mb-6">
-                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
+                          <div className="w-full md:w-2/2 px-3 mb-6">
+                            <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
                               Price
                             </label>
-                            <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="100" />
+                            <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="100" />
                           </div>
-                          <div class="w-full md:w-1/2 px-3 mb-6">
-                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
+                          <div className="w-full md:w-1/2 px-3 mb-6">
+                            <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
                               qty
                             </label>
-                            <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="1" />
+                            <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="1" />
                           </div>
-                          <div class="w-full md:w-1/2 px-3 mb-6">
-                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
+                          <div className="w-full md:w-1/2 px-3 mb-6">
+                            <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
                               Amount
                             </label>
-                            <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="100" />
+                            <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="100" />
                           </div>
-                          <div class="w-full md:w-2/2 px-3">
-                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
+                          <div className="w-full md:w-2/2 px-3">
+                            <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
                               Details
                             </label>
-                            <textarea class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="Doe"> </textarea>
+                            <textarea className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="Doe"> </textarea>
                           </div>
                         </div>
 
@@ -287,20 +287,20 @@ export default function Home() {
                     {/*body*/}
                     <div className="relative p-6 flex-auto">
 
-                      <form class="w-full max-w-lg">
-                        <div class="flex flex-wrap -mx-3 mb-6">
-                          <div class="w-full md:w-2/2 px-3 mb-6">
-                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
+                      <form className="w-full max-w-lg">
+                        <div className="flex flex-wrap -mx-3 mb-6">
+                          <div className="w-full md:w-2/2 px-3 mb-6">
+                            <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
                               Name
                             </label>
-                            <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="Jane" />
-                            <p class="text-red-500 text-xs italic">Please fill out this field.</p>
+                            <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="Jane" />
+                            <p className="text-red-500 text-xs italic">Please fill out this field.</p>
                           </div>
-                          <div class="w-full md:w-2/2 px-3">
-                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
+                          <div className="w-full md:w-2/2 px-3">
+                            <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
                               Price
                             </label>
-                            <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="100" />
+                            <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="100" />
                           </div>
                         </div>
 
@@ -340,260 +340,260 @@ export default function Home() {
 
 
   function TablePagination() {
-    return <div class="overflow-x-auto relative shadow-md sm:rounded-lg">
-      <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+    return <div className="overflow-x-auto relative shadow-md sm:rounded-lg">
+      <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+        <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
           <tr>
-            <th scope="col" class="py-3 px-6">
+            <th scope="col" className="py-3 px-6">
 
             </th>
-            <th scope="col" class="py-3 px-6">
+            <th scope="col" className="py-3 px-6">
               item code
             </th>
-            <th scope="col" class="py-3 px-6">
+            <th scope="col" className="py-3 px-6">
               item name
             </th>
-            <th scope="col" class="py-3 px-6">
+            <th scope="col" className="py-3 px-6">
               qty
             </th>
-            <th scope="col" class="py-3 px-6">
+            <th scope="col" className="py-3 px-6">
               unit price
             </th>
-            <th scope="col" class="py-3 px-6">
+            <th scope="col" className="py-3 px-6">
               total price
             </th>
-            <th scope="col" class="py-3 px-6">
+            <th scope="col" className="py-3 px-6">
               details
             </th>
-            <th scope="col" class="py-3 px-6">
+            <th scope="col" className="py-3 px-6">
 
             </th>
           </tr>
         </thead>
         <tbody>
-          <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+          <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
             <th>
-              <div class="flex items-center pl-4 rounded">
-                <input id="bordered-checkbox-2" type="checkbox" value="" name="bordered-checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+              <div className="flex items-center pl-4 rounded">
+                <input id="bordered-checkbox-2" type="checkbox" value="" name="bordered-checkbox" className="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
               </div>
             </th>
             <td
               scope="row"
-              class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+              className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
             >
               X001
             </td>
-            <td class="py-4 px-6">item 1</td>
-            <td class="py-4 px-6">10</td>
-            <td class="py-4 px-6">200</td>
-            <td class="py-4 px-6">2000</td>
-            <td class="py-4 px-6">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</td>
-            <td class="py-4 px-6 flex items-center justify-start">
+            <td className="py-4 px-6">item 1</td>
+            <td className="py-4 px-6">10</td>
+            <td className="py-4 px-6">200</td>
+            <td className="py-4 px-6">2000</td>
+            <td className="py-4 px-6">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</td>
+            <td className="py-4 px-6 flex items-center justify-start">
               <a
                 href="#"
-                class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline"
+                className="font-medium text-cyan-600 dark:text-cyan-500 hover:underline"
               >
                 <VscPreview />
               </a>
               <a
                 href="#"
-                class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline ml-2"
+                className="font-medium text-cyan-600 dark:text-cyan-500 hover:underline ml-2"
               >
                 <AiFillEdit />
               </a>
               <a
                 href="#"
-                class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline ml-2"
+                className="font-medium text-cyan-600 dark:text-cyan-500 hover:underline ml-2"
               >
                 <AiFillDelete />
               </a>
             </td>
           </tr>
-          <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+          <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
             <th>
-              <div class="flex items-center pl-4 rounded">
-                <input id="bordered-checkbox-2" type="checkbox" value="" name="bordered-checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+              <div className="flex items-center pl-4 rounded">
+                <input id="bordered-checkbox-2" type="checkbox" value="" name="bordered-checkbox" className="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
               </div>
             </th>
             <td
               scope="row"
-              class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+              className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
             >
               X002
             </td>
-            <td class="py-4 px-6">item 2</td>
-            <td class="py-4 px-6">10</td>
-            <td class="py-4 px-6">200</td>
-            <td class="py-4 px-6">2000</td>
-            <td class="py-4 px-6">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</td>
-            <td class="py-4 px-6 flex items-center justify-start">
+            <td className="py-4 px-6">item 2</td>
+            <td className="py-4 px-6">10</td>
+            <td className="py-4 px-6">200</td>
+            <td className="py-4 px-6">2000</td>
+            <td className="py-4 px-6">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</td>
+            <td className="py-4 px-6 flex items-center justify-start">
               <a
                 href="#"
-                class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline"
+                className="font-medium text-cyan-600 dark:text-cyan-500 hover:underline"
               >
                 <VscPreview />
               </a>
               <a
                 href="#"
-                class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline ml-2"
+                className="font-medium text-cyan-600 dark:text-cyan-500 hover:underline ml-2"
               >
                 <AiFillEdit />
               </a>
               <a
                 href="#"
-                class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline ml-2"
+                className="font-medium text-cyan-600 dark:text-cyan-500 hover:underline ml-2"
               >
                 <AiFillDelete />
               </a>
             </td>
           </tr>
-          <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+          <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
             <th>
-              <div class="flex items-center pl-4 rounded">
-                <input id="bordered-checkbox-2" type="checkbox" value="" name="bordered-checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+              <div className="flex items-center pl-4 rounded">
+                <input id="bordered-checkbox-2" type="checkbox" value="" name="bordered-checkbox" className="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
               </div>
             </th>
             <td
               scope="row"
-              class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+              className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
             >
               X003
             </td>
-            <td class="py-4 px-6">item 3</td>
-            <td class="py-4 px-6">10</td>
-            <td class="py-4 px-6">200</td>
-            <td class="py-4 px-6">2000</td>
-            <td class="py-4 px-6">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</td>
-            <td class="py-4 px-6 flex items-center justify-start">
+            <td className="py-4 px-6">item 3</td>
+            <td className="py-4 px-6">10</td>
+            <td className="py-4 px-6">200</td>
+            <td className="py-4 px-6">2000</td>
+            <td className="py-4 px-6">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</td>
+            <td className="py-4 px-6 flex items-center justify-start">
               <a
                 href="#"
-                class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline"
+                className="font-medium text-cyan-600 dark:text-cyan-500 hover:underline"
               >
                 <VscPreview />
               </a>
               <a
                 href="#"
-                class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline ml-2"
+                className="font-medium text-cyan-600 dark:text-cyan-500 hover:underline ml-2"
               >
                 <AiFillEdit />
               </a>
               <a
                 href="#"
-                class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline ml-2"
+                className="font-medium text-cyan-600 dark:text-cyan-500 hover:underline ml-2"
               >
                 <AiFillDelete />
               </a>
             </td>
           </tr>
-          <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+          <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
             <th>
-              <div class="flex items-center pl-4 rounded">
-                <input id="bordered-checkbox-2" type="checkbox" value="" name="bordered-checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+              <div className="flex items-center pl-4 rounded">
+                <input id="bordered-checkbox-2" type="checkbox" value="" name="bordered-checkbox" className="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
               </div>
             </th>
             <td
               scope="row"
-              class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+              className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
             >
               X004
             </td>
-            <td class="py-4 px-6">item 4</td>
-            <td class="py-4 px-6">10</td>
-            <td class="py-4 px-6">200</td>
-            <td class="py-4 px-6">2000</td>
-            <td class="py-4 px-6">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</td>
-            <td class="py-4 px-6 flex items-center justify-start">
+            <td className="py-4 px-6">item 4</td>
+            <td className="py-4 px-6">10</td>
+            <td className="py-4 px-6">200</td>
+            <td className="py-4 px-6">2000</td>
+            <td className="py-4 px-6">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</td>
+            <td className="py-4 px-6 flex items-center justify-start">
               <a
                 href="#"
-                class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline"
+                className="font-medium text-cyan-600 dark:text-cyan-500 hover:underline"
               >
                 <VscPreview />
               </a>
               <a
                 href="#"
-                class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline ml-2"
+                className="font-medium text-cyan-600 dark:text-cyan-500 hover:underline ml-2"
               >
                 <AiFillEdit />
               </a>
               <a
                 href="#"
-                class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline ml-2"
+                className="font-medium text-cyan-600 dark:text-cyan-500 hover:underline ml-2"
               >
                 <AiFillDelete />
               </a>
             </td>
           </tr>
-          <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+          <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
             <th>
-              <div class="flex items-center pl-4 rounded">
-                <input id="bordered-checkbox-2" type="checkbox" value="" name="bordered-checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+              <div className="flex items-center pl-4 rounded">
+                <input id="bordered-checkbox-2" type="checkbox" value="" name="bordered-checkbox" className="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
               </div>
             </th>
             <td
               scope="row"
-              class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+              className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
             >
               X005
             </td>
-            <td class="py-4 px-6">item 5</td>
-            <td class="py-4 px-6">10</td>
-            <td class="py-4 px-6">200</td>
-            <td class="py-4 px-6">2000</td>
-            <td class="py-4 px-6">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</td>
-            <td class="py-4 px-6 flex items-center justify-start">
+            <td className="py-4 px-6">item 5</td>
+            <td className="py-4 px-6">10</td>
+            <td className="py-4 px-6">200</td>
+            <td className="py-4 px-6">2000</td>
+            <td className="py-4 px-6">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</td>
+            <td className="py-4 px-6 flex items-center justify-start">
               <a
                 href="#"
-                class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline"
+                className="font-medium text-cyan-600 dark:text-cyan-500 hover:underline"
               >
                 <VscPreview />
               </a>
               <a
                 href="#"
-                class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline ml-2"
+                className="font-medium text-cyan-600 dark:text-cyan-500 hover:underline ml-2"
               >
                 <AiFillEdit />
               </a>
               <a
                 href="#"
-                class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline ml-2"
+                className="font-medium text-cyan-600 dark:text-cyan-500 hover:underline ml-2"
               >
                 <AiFillDelete />
               </a>
             </td>
           </tr>
-          <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+          <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
             <th>
-              <div class="flex items-center pl-4 rounded">
-                <input id="bordered-checkbox-2" type="checkbox" value="" name="bordered-checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+              <div className="flex items-center pl-4 rounded">
+                <input id="bordered-checkbox-2" type="checkbox" value="" name="bordered-checkbox" className="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
               </div>
             </th>
             <td
               scope="row"
-              class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+              className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
             >
               X006
             </td>
-            <td class="py-4 px-6">item 6</td>
-            <td class="py-4 px-6">10</td>
-            <td class="py-4 px-6">200</td>
-            <td class="py-4 px-6">2000</td>
-            <td class="py-4 px-6">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</td>
-            <td class="py-4 px-6 flex items-center justify-start">
+            <td className="py-4 px-6">item 6</td>
+            <td className="py-4 px-6">10</td>
+            <td className="py-4 px-6">200</td>
+            <td className="py-4 px-6">2000</td>
+            <td className="py-4 px-6">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</td>
+            <td className="py-4 px-6 flex items-center justify-start">
               <a
                 href="#"
-                class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline"
+                className="font-medium text-cyan-600 dark:text-cyan-500 hover:underline"
               >
                 <VscPreview />
               </a>
               <a
                 href="#"
-                class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline ml-2"
+                className="font-medium text-cyan-600 dark:text-cyan-500 hover:underline ml-2"
               >
                 <AiFillEdit />
               </a>
               <a
                 href="#"
-                class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline ml-2"
+                className="font-medium text-cyan-600 dark:text-cyan-500 hover:underline ml-2"
               >
                 <AiFillDelete />
               </a>
@@ -603,7 +603,7 @@ export default function Home() {
         </tbody>
       </table>
       <nav
-        class="flex justify-center items-center p-4"
+        className="flex justify-center items-center p-4"
         aria-label="Table navigation"
       >
         <p>Total 12,000 Bath</p>
