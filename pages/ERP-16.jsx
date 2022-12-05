@@ -104,8 +104,8 @@ export default function Home() {
         <div className="w-full grid grid-cols-1 gap-4 mb-4">
           <div className="bg-white shadow rounded-lg p-4 sm:p-6 xl:p-8  2xl:col-span-2">
             <div>
-              <h1 class="mb-4 text-center font-black text-cyan-700">STEPS</h1>
-              <div class="flex flex-row items-center justify-around">
+              <h1 className="mb-4 text-center font-black text-cyan-700">STEPS</h1>
+              <div className="flex flex-row items-center justify-around">
 
                 <StepComponent name="QN" description="Quotation" icon={<BiNews />} />
 
@@ -131,65 +131,65 @@ export default function Home() {
 
         <div className="w-full grid grid-cols-1 gap-4 mb-4">
           <div className="bg-white shadow rounded-lg p-4 sm:p-6 xl:p-8  2xl:col-span-2">
-            <h1 class="mb-4 text-center font-black text-cyan-700">PROJECT TIMELINE</h1>
+            <h1 className="mb-4 text-center font-black text-cyan-700">PROJECT TIMELINE</h1>
 
-            <ol class="relative border-l border-gray-200 dark:border-gray-700">
-              <li class="mb-10 ml-6">
-                <span class="flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-200 rounded-full ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
-                  <svg aria-hidden="true" class="w-3 h-3 text-blue-600 dark:text-blue-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+            <ol className="relative border-l border-gray-200 dark:border-gray-700">
+              <li className="mb-10 ml-6">
+                <span className="flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-200 rounded-full ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+                  <svg aria-hidden="true" className="w-3 h-3 text-blue-600 dark:text-blue-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
                 </span>
-                <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white">Quotation</h3>
-                <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Released on January 13th, 2022</time>
+                <h3 className="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white">Quotation</h3>
+                <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Released on January 13th, 2022</time>
                 <div className="flex flex-row items-center justify-between py-2">
 
-                  <div class="flex items-center pl-4 rounded">
-                    <label for="bordered-checkbox-2" class="py-4 ml-2 w-full text-sm font-medium text-gray-900 dark:text-gray-300 pr-2">Supplier: Supplier 1</label>
+                  <div className="flex items-center pl-4 rounded">
+                    <label for="bordered-checkbox-2" className="py-4 ml-2 w-full text-sm font-medium text-gray-900 dark:text-gray-300 pr-2">Supplier: Supplier 1</label>
                   </div>
-                  <div class="flex items-center pr-4 rounded">
-                    <label for="bordered-checkbox-2" class="py-4 ml-2 w-full text-sm font-medium text-gray-900 dark:text-gray-300 pr-2">Status: Finalized</label>
+                  <div className="flex items-center pr-4 rounded">
+                    <label for="bordered-checkbox-2" className="py-4 ml-2 w-full text-sm font-medium text-gray-900 dark:text-gray-300 pr-2">Status: Finalized</label>
                   </div>
                 </div>
 
                 {TablePagination()}
                 <br />
-                <a href="#" class="inline-flex items-center py-2 px-4 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"> <MdAttachFile className="mr-2" /> Attach Files Quotation File</a>
+                <a href="#" className="inline-flex items-center py-2 px-4 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"> <MdAttachFile className="mr-2" /> Attach Files Quotation File</a>
 
               </li>
-              <li class="mb-10 ml-6">
-                <span class="flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-200 rounded-full ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
-                  <svg aria-hidden="true" class="w-3 h-3 text-blue-600 dark:text-blue-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+              <li className="mb-10 ml-6">
+                <span className="flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-200 rounded-full ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+                  <svg aria-hidden="true" className="w-3 h-3 text-blue-600 dark:text-blue-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
                 </span>
-                <h3 class="mb-1 text-lg font-semibold text-gray-900 dark:text-white">Purchase Order</h3>
-                <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Released on December 2nd, 2022</time>
-                <a href="#" class="inline-flex items-center py-2 px-4 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"><svg class="mr-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm5 6a1 1 0 10-2 0v3.586l-1.293-1.293a1 1 0 10-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 11.586V8z" clip-rule="evenodd"></path></svg> Download PDF</a>
-                <a href="#" class="ml-2 inline-flex items-center py-2 px-4 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"><MdAttachFile className="mr-2" /> Attach Files Purchase Order File</a>
+                <h3 className="mb-1 text-lg font-semibold text-gray-900 dark:text-white">Purchase Order</h3>
+                <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Released on December 2nd, 2022</time>
+                <a href="#" className="inline-flex items-center py-2 px-4 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"><svg className="mr-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm5 6a1 1 0 10-2 0v3.586l-1.293-1.293a1 1 0 10-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 11.586V8z" clip-rule="evenodd"></path></svg> Download PDF</a>
+                <a href="#" className="ml-2 inline-flex items-center py-2 px-4 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"><MdAttachFile className="mr-2" /> Attach Files Purchase Order File</a>
               </li>
-              <li class="mb-10 ml-6">
-                <span class="flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-200 rounded-full ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
-                  <svg aria-hidden="true" class="w-3 h-3 text-blue-600 dark:text-blue-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+              <li className="mb-10 ml-6">
+                <span className="flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-200 rounded-full ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+                  <svg aria-hidden="true" className="w-3 h-3 text-blue-600 dark:text-blue-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
                 </span>
-                <h3 class="mb-1 text-lg font-semibold text-gray-900 dark:text-white">Invoice</h3>
-                <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Released on December 16th, 2022</time>
-                <a href="#" class="inline-flex items-center py-2 px-4 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"><svg class="mr-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm5 6a1 1 0 10-2 0v3.586l-1.293-1.293a1 1 0 10-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 11.586V8z" clip-rule="evenodd"></path></svg> Download PDF</a>
-                <a href="#" class="ml-2 inline-flex items-center py-2 px-4 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"> <MdAttachFile className="mr-2" /> Attach Files Invoice File</a>
-                <a href="#" class="ml-2 inline-flex items-center py-2 px-4 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"> <MdAttachFile className="mr-2" /> Attach Files Goods Received File</a>
+                <h3 className="mb-1 text-lg font-semibold text-gray-900 dark:text-white">Invoice</h3>
+                <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Released on December 16th, 2022</time>
+                <a href="#" className="inline-flex items-center py-2 px-4 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"><svg className="mr-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm5 6a1 1 0 10-2 0v3.586l-1.293-1.293a1 1 0 10-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 11.586V8z" clip-rule="evenodd"></path></svg> Download PDF</a>
+                <a href="#" className="ml-2 inline-flex items-center py-2 px-4 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"> <MdAttachFile className="mr-2" /> Attach Files Invoice File</a>
+                <a href="#" className="ml-2 inline-flex items-center py-2 px-4 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"> <MdAttachFile className="mr-2" /> Attach Files Goods Received File</a>
 
               </li>
-              <li class="mb-10 ml-6">
-                <span class="flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-200 rounded-full ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
-                  <svg aria-hidden="true" class="w-3 h-3 text-blue-600 dark:text-blue-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+              <li className="mb-10 ml-6">
+                <span className="flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-200 rounded-full ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+                  <svg aria-hidden="true" className="w-3 h-3 text-blue-600 dark:text-blue-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
                 </span>
-                <h3 class="mb-1 text-lg font-semibold text-gray-900 dark:text-white">Receipt</h3>
-                <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Released on December 18th, 2022</time>
-                <a href="#" class="inline-flex items-center py-2 px-4 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"><svg class="mr-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm5 6a1 1 0 10-2 0v3.586l-1.293-1.293a1 1 0 10-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 11.586V8z" clip-rule="evenodd"></path></svg> Download PDF</a>
-                <a href="#" class="ml-2 inline-flex items-center py-2 px-4 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"> <MdAttachFile className="mr-2" /> Attach Files Receipt File</a>
+                <h3 className="mb-1 text-lg font-semibold text-gray-900 dark:text-white">Receipt</h3>
+                <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Released on December 18th, 2022</time>
+                <a href="#" className="inline-flex items-center py-2 px-4 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"><svg className="mr-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm5 6a1 1 0 10-2 0v3.586l-1.293-1.293a1 1 0 10-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 11.586V8z" clip-rule="evenodd"></path></svg> Download PDF</a>
+                <a href="#" className="ml-2 inline-flex items-center py-2 px-4 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"> <MdAttachFile className="mr-2" /> Attach Files Receipt File</a>
               </li>
-              <li class="ml-6">
-                <span class="flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-200 rounded-full ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
-                  <svg aria-hidden="true" class="w-3 h-3 text-blue-600 dark:text-blue-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+              <li className="ml-6">
+                <span className="flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-200 rounded-full ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+                  <svg aria-hidden="true" className="w-3 h-3 text-blue-600 dark:text-blue-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
                 </span>
-                <h3 class="mb-1 text-lg font-semibold text-gray-900 dark:text-white">Done</h3>
-                <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Released on December 20th, 2022</time>
+                <h3 className="mb-1 text-lg font-semibold text-gray-900 dark:text-white">Done</h3>
+                <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Released on December 20th, 2022</time>
               </li>
             </ol>
 
@@ -205,45 +205,45 @@ export default function Home() {
   );
 
   function ArrowRight() {
-    return <div class="flex-1 flex items-center justify-center">
+    return <div className="flex-1 flex items-center justify-center">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M14 2h-7.229l7.014 7h-13.785v6h13.785l-7.014 7h7.229l10-10z" /></svg>
     </div>;
   }
 
   function StepComponent({ name, description, icon, step, nextStep }) {
-    return <div class="w-1/3 text-center px-6">
+    return <div className="w-1/3 text-center px-6">
       {nextStep ?
         <div
-          class={`bg-gray-300 rounded-lg items-center justify-center border border-gray-200 flex flex-col`}
+          className={`bg-gray-300 rounded-lg items-center justify-center border border-gray-200 flex flex-col`}
         >
           <div
-            class={`w-3/3 bg-transparent h-10 flex items-center justify-center icon-step text-gray-600`}
+            className={`w-3/3 bg-transparent h-10 flex items-center justify-center icon-step text-gray-600`}
           >
             {icon}
           </div>
           <div
-            class={`w-3/3 bg-gray-200 h-24 w-full flex flex-col items-center justify-center px-1 body-step rounded-b-lg`}
+            className={`w-3/3 bg-gray-200 h-24 w-full flex flex-col items-center justify-center px-1 body-step rounded-b-lg`}
           >
-            <h2 class={`font-bold text-sm`}>{name}</h2>
-            <p class={`text-xs text-gray-600`}>
+            <h2 className={`font-bold text-sm`}>{name}</h2>
+            <p className={`text-xs text-gray-600`}>
               ({description})
             </p>
           </div>
         </div>
         :
         <div
-          class={`${!step ? 'bg-cyan-700' : 'bg-cyan-500'} rounded-lg items-center justify-center border ${!step ? 'border-cyan-500' : 'border-cyan-200'} flex flex-col`}
+          className={`${!step ? 'bg-cyan-700' : 'bg-cyan-500'} rounded-lg items-center justify-center border ${!step ? 'border-cyan-500' : 'border-cyan-200'} flex flex-col`}
         >
           <div
-            class={`w-3/3 bg-transparent h-10 flex items-center justify-center icon-step ${!step ? 'text-white' : 'text-gray-600'}`}
+            className={`w-3/3 bg-transparent h-10 flex items-center justify-center icon-step ${!step ? 'text-white' : 'text-gray-600'}`}
           >
             {icon}
           </div>
           <div
-            class={`w-3/3 ${!step ? 'bg-cyan-500' : 'bg-cyan-200'} h-24 w-full flex flex-col items-center justify-center px-1 body-step rounded-b-lg`}
+            className={`w-3/3 ${!step ? 'bg-cyan-500' : 'bg-cyan-200'} h-24 w-full flex flex-col items-center justify-center px-1 body-step rounded-b-lg`}
           >
-            <h2 class={`font-bold text-sm ${!step ? 'text-white' : 'text-gray-600'}`}>{name}</h2>
-            <p class={`text-xs ${!step ? 'text-white' : 'text-gray-600'}`}>
+            <h2 className={`font-bold text-sm ${!step ? 'text-white' : 'text-gray-600'}`}>{name}</h2>
+            <p className={`text-xs ${!step ? 'text-white' : 'text-gray-600'}`}>
               ({description})
             </p>
           </div>
@@ -252,227 +252,227 @@ export default function Home() {
   }
 
   function TablePagination() {
-    return <div class="overflow-x-auto relative shadow-md sm:rounded-lg">
-      <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+    return <div className="overflow-x-auto relative shadow-md sm:rounded-lg">
+      <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+        <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
           <tr>
-            <th scope="col" class="py-3 px-6">
+            <th scope="col" className="py-3 px-6">
               item code
             </th>
-            <th scope="col" class="py-3 px-6">
+            <th scope="col" className="py-3 px-6">
               item name
             </th>
-            <th scope="col" class="py-3 px-6">
+            <th scope="col" className="py-3 px-6">
               qty
             </th>
-            <th scope="col" class="py-3 px-6">
+            <th scope="col" className="py-3 px-6">
               unit price
             </th>
-            <th scope="col" class="py-3 px-6">
+            <th scope="col" className="py-3 px-6">
               total price
             </th>
-            <th scope="col" class="py-3 px-6">
+            <th scope="col" className="py-3 px-6">
               details
             </th>
-            <th scope="col" class="py-3 px-6">
+            <th scope="col" className="py-3 px-6">
 
             </th>
           </tr>
         </thead>
         <tbody>
-          <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+          <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
             <th
               scope="row"
-              class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+              className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
             >
               X001
             </th>
-            <td class="py-4 px-6">item 1</td>
-            <td class="py-4 px-6">10</td>
-            <td class="py-4 px-6">200</td>
-            <td class="py-4 px-6">2000</td>
-            <td class="py-4 px-6">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</td>
-            <td class="py-4 px-6 flex items-center justify-start">
+            <td className="py-4 px-6">item 1</td>
+            <td className="py-4 px-6">10</td>
+            <td className="py-4 px-6">200</td>
+            <td className="py-4 px-6">2000</td>
+            <td className="py-4 px-6">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</td>
+            <td className="py-4 px-6 flex items-center justify-start">
               <a
                 href="#"
-                class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline"
+                className="font-medium text-cyan-600 dark:text-cyan-500 hover:underline"
               >
                 <VscPreview />
               </a>
               <a
                 href="#"
-                class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline ml-2"
+                className="font-medium text-cyan-600 dark:text-cyan-500 hover:underline ml-2"
               >
                 <AiFillEdit />
               </a>
               <a
                 href="#"
-                class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline ml-2"
+                className="font-medium text-cyan-600 dark:text-cyan-500 hover:underline ml-2"
               >
                 <AiFillDelete />
               </a>
             </td>
           </tr>
-          <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+          <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
             <th
               scope="row"
-              class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+              className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
             >
               X002
             </th>
-            <td class="py-4 px-6">item 2</td>
-            <td class="py-4 px-6">10</td>
-            <td class="py-4 px-6">200</td>
-            <td class="py-4 px-6">2000</td>
-            <td class="py-4 px-6">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</td>
-            <td class="py-4 px-6 flex items-center justify-start">
+            <td className="py-4 px-6">item 2</td>
+            <td className="py-4 px-6">10</td>
+            <td className="py-4 px-6">200</td>
+            <td className="py-4 px-6">2000</td>
+            <td className="py-4 px-6">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</td>
+            <td className="py-4 px-6 flex items-center justify-start">
               <a
                 href="#"
-                class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline"
+                className="font-medium text-cyan-600 dark:text-cyan-500 hover:underline"
               >
                 <VscPreview />
               </a>
               <a
                 href="#"
-                class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline ml-2"
+                className="font-medium text-cyan-600 dark:text-cyan-500 hover:underline ml-2"
               >
                 <AiFillEdit />
               </a>
               <a
                 href="#"
-                class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline ml-2"
+                className="font-medium text-cyan-600 dark:text-cyan-500 hover:underline ml-2"
               >
                 <AiFillDelete />
               </a>
             </td>
           </tr>
-          <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+          <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
             <th
               scope="row"
-              class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+              className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
             >
               X003
             </th>
-            <td class="py-4 px-6">item 3</td>
-            <td class="py-4 px-6">10</td>
-            <td class="py-4 px-6">200</td>
-            <td class="py-4 px-6">2000</td>
-            <td class="py-4 px-6">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</td>
-            <td class="py-4 px-6 flex items-center justify-start">
+            <td className="py-4 px-6">item 3</td>
+            <td className="py-4 px-6">10</td>
+            <td className="py-4 px-6">200</td>
+            <td className="py-4 px-6">2000</td>
+            <td className="py-4 px-6">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</td>
+            <td className="py-4 px-6 flex items-center justify-start">
               <a
                 href="#"
-                class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline"
+                className="font-medium text-cyan-600 dark:text-cyan-500 hover:underline"
               >
                 <VscPreview />
               </a>
               <a
                 href="#"
-                class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline ml-2"
+                className="font-medium text-cyan-600 dark:text-cyan-500 hover:underline ml-2"
               >
                 <AiFillEdit />
               </a>
               <a
                 href="#"
-                class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline ml-2"
+                className="font-medium text-cyan-600 dark:text-cyan-500 hover:underline ml-2"
               >
                 <AiFillDelete />
               </a>
             </td>
           </tr>
-          <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+          <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
             <th
               scope="row"
-              class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+              className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
             >
               X004
             </th>
-            <td class="py-4 px-6">item 4</td>
-            <td class="py-4 px-6">10</td>
-            <td class="py-4 px-6">200</td>
-            <td class="py-4 px-6">2000</td>
-            <td class="py-4 px-6">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</td>
-            <td class="py-4 px-6 flex items-center justify-start">
+            <td className="py-4 px-6">item 4</td>
+            <td className="py-4 px-6">10</td>
+            <td className="py-4 px-6">200</td>
+            <td className="py-4 px-6">2000</td>
+            <td className="py-4 px-6">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</td>
+            <td className="py-4 px-6 flex items-center justify-start">
               <a
                 href="#"
-                class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline"
+                className="font-medium text-cyan-600 dark:text-cyan-500 hover:underline"
               >
                 <VscPreview />
               </a>
               <a
                 href="#"
-                class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline ml-2"
+                className="font-medium text-cyan-600 dark:text-cyan-500 hover:underline ml-2"
               >
                 <AiFillEdit />
               </a>
               <a
                 href="#"
-                class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline ml-2"
+                className="font-medium text-cyan-600 dark:text-cyan-500 hover:underline ml-2"
               >
                 <AiFillDelete />
               </a>
             </td>
           </tr>
-          <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+          <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
             <th
               scope="row"
-              class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+              className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
             >
               X005
             </th>
-            <td class="py-4 px-6">item 5</td>
-            <td class="py-4 px-6">10</td>
-            <td class="py-4 px-6">200</td>
-            <td class="py-4 px-6">2000</td>
-            <td class="py-4 px-6">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</td>
-            <td class="py-4 px-6 flex items-center justify-start">
+            <td className="py-4 px-6">item 5</td>
+            <td className="py-4 px-6">10</td>
+            <td className="py-4 px-6">200</td>
+            <td className="py-4 px-6">2000</td>
+            <td className="py-4 px-6">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</td>
+            <td className="py-4 px-6 flex items-center justify-start">
               <a
                 href="#"
-                class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline"
+                className="font-medium text-cyan-600 dark:text-cyan-500 hover:underline"
               >
                 <VscPreview />
               </a>
               <a
                 href="#"
-                class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline ml-2"
+                className="font-medium text-cyan-600 dark:text-cyan-500 hover:underline ml-2"
               >
                 <AiFillEdit />
               </a>
               <a
                 href="#"
-                class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline ml-2"
+                className="font-medium text-cyan-600 dark:text-cyan-500 hover:underline ml-2"
               >
                 <AiFillDelete />
               </a>
             </td>
           </tr>
-          <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+          <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
             <th
               scope="row"
-              class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+              className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
             >
               X006
             </th>
-            <td class="py-4 px-6">item 6</td>
-            <td class="py-4 px-6">10</td>
-            <td class="py-4 px-6">200</td>
-            <td class="py-4 px-6">2000</td>
-            <td class="py-4 px-6">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</td>
-            <td class="py-4 px-6 flex items-center justify-start">
+            <td className="py-4 px-6">item 6</td>
+            <td className="py-4 px-6">10</td>
+            <td className="py-4 px-6">200</td>
+            <td className="py-4 px-6">2000</td>
+            <td className="py-4 px-6">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</td>
+            <td className="py-4 px-6 flex items-center justify-start">
               <a
                 href="#"
-                class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline"
+                className="font-medium text-cyan-600 dark:text-cyan-500 hover:underline"
               >
                 <VscPreview />
               </a>
               <a
                 href="#"
-                class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline ml-2"
+                className="font-medium text-cyan-600 dark:text-cyan-500 hover:underline ml-2"
               >
                 <AiFillEdit />
               </a>
               <a
                 href="#"
-                class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline ml-2"
+                className="font-medium text-cyan-600 dark:text-cyan-500 hover:underline ml-2"
               >
                 <AiFillDelete />
               </a>
@@ -482,7 +482,7 @@ export default function Home() {
         </tbody>
       </table>
       <nav
-        class="flex justify-center items-center p-4"
+        className="flex justify-center items-center p-4"
         aria-label="Table navigation"
       >
         <p>Total 12,000 Bath</p>

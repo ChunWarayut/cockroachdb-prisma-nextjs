@@ -107,51 +107,51 @@ export default function Home() {
                     {/*body*/}
                     <div className="relative p-6 flex-auto">
 
-                      <form class="w-full max-w-lg">
-                        <div class="flex flex-wrap -mx-3 mb-6">
-                          <div class="w-full md:w-2/2 px-3 mb-6">
-                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
+                      <form className="w-full max-w-lg">
+                        <div className="flex flex-wrap -mx-3 mb-6">
+                          <div className="w-full md:w-2/2 px-3 mb-6">
+                            <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
                               Project Name
                             </label>
-                            <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="Jane" />
-                            <p class="text-red-500 text-xs italic">Please fill out this field.</p>
+                            <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="Jane" />
+                            <p className="text-red-500 text-xs italic">Please fill out this field.</p>
                           </div>
-                          <div class="w-full md:w-2/2 px-3 mb-6">
-                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
+                          <div className="w-full md:w-2/2 px-3 mb-6">
+                            <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
                               Customer Name
                             </label>
-                            <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="Doe" />
+                            <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="Doe" />
                           </div>
-                          <div class="w-full md:w-2/2 px-3">
-                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
+                          <div className="w-full md:w-2/2 px-3">
+                            <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
                               Project Details
                             </label>
-                            <textarea class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="Doe"> </textarea>
+                            <textarea className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="Doe"> </textarea>
                           </div>
                         </div>
-                        <div class="flex flex-wrap -mx-3 mb-2">
-                          <div class="w-full md:w-3/3 px-3 mb-6 md:mb-0">
-                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
+                        <div className="flex flex-wrap -mx-3 mb-2">
+                          <div className="w-full md:w-3/3 px-3 mb-6 md:mb-0">
+                            <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
                               Attach Files
                             </label>
 
-                            <div class="flex justify-center items-center w-full">
-                              <label for="dropzone-file" class="flex flex-col justify-center items-center w-full h-64 bg-gray-50 rounded-lg border-2 border-gray-300 border-dashed cursor-pointer dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
-                                <div class="flex flex-col justify-center items-center pt-5 pb-6">
-                                  <svg aria-hidden="true" class="mb-3 w-10 h-10 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path></svg>
-                                  <p class="mb-2 text-sm text-gray-500 dark:text-gray-400"><span class="font-semibold">Click to upload</span> or drag and drop</p>
-                                  <p class="text-xs text-gray-500 dark:text-gray-400">SVG, PNG, JPG or GIF (MAX. 800x400px)</p>
+                            <div className="flex justify-center items-center w-full">
+                              <label for="dropzone-file" className="flex flex-col justify-center items-center w-full h-64 bg-gray-50 rounded-lg border-2 border-gray-300 border-dashed cursor-pointer dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
+                                <div className="flex flex-col justify-center items-center pt-5 pb-6">
+                                  <svg aria-hidden="true" className="mb-3 w-10 h-10 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path></svg>
+                                  <p className="mb-2 text-sm text-gray-500 dark:text-gray-400"><span className="font-semibold">Click to upload</span> or drag and drop</p>
+                                  <p className="text-xs text-gray-500 dark:text-gray-400">SVG, PNG, JPG or GIF (MAX. 800x400px)</p>
                                 </div>
-                                <input id="dropzone-file" type="file" class="hidden" />
+                                <input id="dropzone-file" type="file" className="hidden" />
                               </label>
                             </div>
 
 
                           </div>
                         </div>
-                        <div class="flex flex-wrap -mx-3 mb-2">
-                          <div class="w-full md:w-3/3 px-3 mb-6 md:mb-0">
-                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
+                        <div className="flex flex-wrap -mx-3 mb-2">
+                          <div className="w-full md:w-3/3 px-3 mb-6 md:mb-0">
+                            <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
                               Supplier Name
                             </label>
                             <Select
@@ -198,215 +198,215 @@ export default function Home() {
   );
 
   function checkboxCloseAndDone() {
-    return <div class="flex items-center pl-4 rounded dark:border-gray-700">
-      <input checked id="bordered-checkbox-2" type="checkbox" value="" name="bordered-checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
-      <label for="bordered-checkbox-2" class="py-4 ml-2 w-full text-sm font-medium text-gray-900 dark:text-gray-300 pr-2">Included Close&Done Project</label>
+    return <div className="flex items-center pl-4 rounded dark:border-gray-700">
+      <input checked id="bordered-checkbox-2" type="checkbox" value="" name="bordered-checkbox" className="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+      <label for="bordered-checkbox-2" className="py-4 ml-2 w-full text-sm font-medium text-gray-900 dark:text-gray-300 pr-2">Included Close&Done Project</label>
     </div>;
   }
 
   function TablePagination() {
-    return <div class="overflow-x-auto relative shadow-md sm:rounded-lg">
-      <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+    return <div className="overflow-x-auto relative shadow-md sm:rounded-lg">
+      <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+        <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
           <tr>
-            <th scope="col" class="py-3 px-6">
+            <th scope="col" className="py-3 px-6">
               PROJECT name
             </th>
-            <th scope="col" class="py-3 px-6">
+            <th scope="col" className="py-3 px-6">
               Customer
             </th>
-            <th scope="col" class="py-3 px-6">
+            <th scope="col" className="py-3 px-6">
               details
             </th>
-            <th scope="col" class="py-3 px-6">
+            <th scope="col" className="py-3 px-6">
               Supplier
             </th>
-            <th scope="col" class="py-3 px-6">
+            <th scope="col" className="py-3 px-6">
               Status
             </th>
-            <th scope="col" class="py-3 px-6">
+            <th scope="col" className="py-3 px-6">
 
             </th>
           </tr>
         </thead>
         <tbody>
-          <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+          <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
             <th
               scope="row"
-              class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+              className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
             >
               PROJECT 1
             </th>
-            <td class="py-4 px-6">Sliver</td>
-            <td class="py-4 px-6">Laptop</td>
-            <td class="py-4 px-6">xxx</td>
-            <td class="py-4 px-6">xxx</td>
-            <td class="py-4 px-6 flex items-center justify-start">
+            <td className="py-4 px-6">Sliver</td>
+            <td className="py-4 px-6">Laptop</td>
+            <td className="py-4 px-6">xxx</td>
+            <td className="py-4 px-6">xxx</td>
+            <td className="py-4 px-6 flex items-center justify-start">
               <a
                 href="#"
-                class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline"
+                className="font-medium text-cyan-600 dark:text-cyan-500 hover:underline"
               >
                 <AiFillEdit />
               </a>
               <a
                 href="#"
-                class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline ml-2"
+                className="font-medium text-cyan-600 dark:text-cyan-500 hover:underline ml-2"
               >
                 <AiFillDelete />
               </a>
             </td>
           </tr>
-          <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+          <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
             <th
               scope="row"
-              class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+              className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
             >
               PROJECT 2
             </th>
-            <td class="py-4 px-6">White</td>
-            <td class="py-4 px-6">Laptop PC</td>
-            <td class="py-4 px-6">xxx</td>
-            <td class="py-4 px-6">xxx</td>
-            <td class="py-4 px-6 flex items-center justify-start">
+            <td className="py-4 px-6">White</td>
+            <td className="py-4 px-6">Laptop PC</td>
+            <td className="py-4 px-6">xxx</td>
+            <td className="py-4 px-6">xxx</td>
+            <td className="py-4 px-6 flex items-center justify-start">
               <a
                 href="#"
-                class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline"
+                className="font-medium text-cyan-600 dark:text-cyan-500 hover:underline"
               >
                 <AiFillEdit />
               </a>
               <a
                 href="#"
-                class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline ml-2"
+                className="font-medium text-cyan-600 dark:text-cyan-500 hover:underline ml-2"
               >
                 <AiFillDelete />
               </a>
             </td>
           </tr>
-          <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+          <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
             <th
               scope="row"
-              class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+              className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
             >
               PROJECT 3
             </th>
-            <td class="py-4 px-6">Black</td>
-            <td class="py-4 px-6">Accessories</td>
-            <td class="py-4 px-6">xxx</td>
-            <td class="py-4 px-6">xxx</td>
-            <td class="py-4 px-6 flex items-center justify-start">
+            <td className="py-4 px-6">Black</td>
+            <td className="py-4 px-6">Accessories</td>
+            <td className="py-4 px-6">xxx</td>
+            <td className="py-4 px-6">xxx</td>
+            <td className="py-4 px-6 flex items-center justify-start">
               <a
                 href="#"
-                class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline"
+                className="font-medium text-cyan-600 dark:text-cyan-500 hover:underline"
               >
                 <AiFillEdit />
               </a>
               <a
                 href="#"
-                class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline ml-2"
+                className="font-medium text-cyan-600 dark:text-cyan-500 hover:underline ml-2"
               >
                 <AiFillDelete />
               </a>
             </td>
           </tr>
-          <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+          <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
             <th
               scope="row"
-              class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+              className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
             >
               PROJECT 4
             </th>
-            <td class="py-4 px-6">Black</td>
-            <td class="py-4 px-6">Watches</td>
-            <td class="py-4 px-6">xxx</td>
-            <td class="py-4 px-6">xxx</td>
-            <td class="py-4 px-6 flex items-center justify-start">
+            <td className="py-4 px-6">Black</td>
+            <td className="py-4 px-6">Watches</td>
+            <td className="py-4 px-6">xxx</td>
+            <td className="py-4 px-6">xxx</td>
+            <td className="py-4 px-6 flex items-center justify-start">
               <a
                 href="#"
-                class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline"
+                className="font-medium text-cyan-600 dark:text-cyan-500 hover:underline"
               >
                 <AiFillEdit />
               </a>
               <a
                 href="#"
-                class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline ml-2"
+                className="font-medium text-cyan-600 dark:text-cyan-500 hover:underline ml-2"
               >
                 <AiFillDelete />
               </a>
             </td>
           </tr>
-          <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+          <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
             <th
               scope="row"
-              class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+              className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
             >
               PROJECT 5
             </th>
-            <td class="py-4 px-6">Silver</td>
-            <td class="py-4 px-6">PC</td>
-            <td class="py-4 px-6">xxx</td>
-            <td class="py-4 px-6">xxx</td>
-            <td class="py-4 px-6 flex items-center justify-start">
+            <td className="py-4 px-6">Silver</td>
+            <td className="py-4 px-6">PC</td>
+            <td className="py-4 px-6">xxx</td>
+            <td className="py-4 px-6">xxx</td>
+            <td className="py-4 px-6 flex items-center justify-start">
               <a
                 href="#"
-                class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline"
+                className="font-medium text-cyan-600 dark:text-cyan-500 hover:underline"
               >
                 <AiFillEdit />
               </a>
               <a
                 href="#"
-                class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline ml-2"
+                className="font-medium text-cyan-600 dark:text-cyan-500 hover:underline ml-2"
               >
                 <AiFillDelete />
               </a>
             </td>
           </tr>
-          <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+          <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
             <th
               scope="row"
-              class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+              className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
             >
               PROJECT 6
             </th>
-            <td class="py-4 px-6">White</td>
-            <td class="py-4 px-6">Accessories</td>
-            <td class="py-4 px-6">xxx</td>
-            <td class="py-4 px-6">xxx</td>
-            <td class="py-4 px-6 flex items-center justify-start">
+            <td className="py-4 px-6">White</td>
+            <td className="py-4 px-6">Accessories</td>
+            <td className="py-4 px-6">xxx</td>
+            <td className="py-4 px-6">xxx</td>
+            <td className="py-4 px-6 flex items-center justify-start">
               <a
                 href="#"
-                class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline"
+                className="font-medium text-cyan-600 dark:text-cyan-500 hover:underline"
               >
                 <AiFillEdit />
               </a>
               <a
                 href="#"
-                class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline ml-2"
+                className="font-medium text-cyan-600 dark:text-cyan-500 hover:underline ml-2"
               >
                 <AiFillDelete />
               </a>
             </td>
           </tr>
-          <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+          <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
             <th
               scope="row"
-              class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+              className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
             >
               PROJECT 7
             </th>
-            <td class="py-4 px-6">Gold</td>
-            <td class="py-4 px-6">Tablet</td>
-            <td class="py-4 px-6">xxx</td>
-            <td class="py-4 px-6">xxx</td>
-            <td class="py-4 px-6 flex items-center justify-start">
+            <td className="py-4 px-6">Gold</td>
+            <td className="py-4 px-6">Tablet</td>
+            <td className="py-4 px-6">xxx</td>
+            <td className="py-4 px-6">xxx</td>
+            <td className="py-4 px-6 flex items-center justify-start">
               <a
                 href="#"
-                class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline"
+                className="font-medium text-cyan-600 dark:text-cyan-500 hover:underline"
               >
                 <AiFillEdit />
               </a>
               <a
                 href="#"
-                class="font-medium text-cyan-600 dark:text-cyan-500 hover:underline ml-2"
+                className="font-medium text-cyan-600 dark:text-cyan-500 hover:underline ml-2"
               >
                 <AiFillDelete />
               </a>
@@ -415,28 +415,28 @@ export default function Home() {
         </tbody>
       </table>
       <nav
-        class="flex justify-between items-center p-4"
+        className="flex justify-between items-center p-4"
         aria-label="Table navigation"
       >
-        <span class="text-sm font-normal text-gray-500 dark:text-gray-400">
+        <span className="text-sm font-normal text-gray-500 dark:text-gray-400">
           Showing{" "}
-          <span class="font-semibold text-gray-900 dark:text-white">
+          <span className="font-semibold text-gray-900 dark:text-white">
             1-10
           </span>{" "}
           of{" "}
-          <span class="font-semibold text-gray-900 dark:text-white">
+          <span className="font-semibold text-gray-900 dark:text-white">
             1000
           </span>
         </span>
-        <ul class="inline-flex items-center -space-x-px">
+        <ul className="inline-flex items-center -space-x-px">
           <li>
             <a
               href="#"
-              class="block py-2 px-3 ml-0 leading-tight text-gray-500 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+              className="block py-2 px-3 ml-0 leading-tight text-gray-500 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
             >
-              <span class="sr-only">Previous</span>
+              <span className="sr-only">Previous</span>
               <svg
-                class="w-5 h-5"
+                className="w-5 h-5"
                 aria-hidden="true"
                 fill="currentColor"
                 viewBox="0 0 20 20"
@@ -453,7 +453,7 @@ export default function Home() {
           <li>
             <a
               href="#"
-              class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+              className="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
             >
               1
             </a>
@@ -461,7 +461,7 @@ export default function Home() {
           <li>
             <a
               href="#"
-              class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+              className="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
             >
               2
             </a>
@@ -470,7 +470,7 @@ export default function Home() {
             <a
               href="#"
               aria-current="page"
-              class="z-10 py-2 px-3 leading-tight text-cyan-600 bg-cyan-50 border border-cyan-300 hover:bg-cyan-100 hover:text-cyan-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white"
+              className="z-10 py-2 px-3 leading-tight text-cyan-600 bg-cyan-50 border border-cyan-300 hover:bg-cyan-100 hover:text-cyan-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white"
             >
               3
             </a>
@@ -478,7 +478,7 @@ export default function Home() {
           <li>
             <a
               href="#"
-              class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+              className="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
             >
               ...
             </a>
@@ -486,7 +486,7 @@ export default function Home() {
           <li>
             <a
               href="#"
-              class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+              className="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
             >
               100
             </a>
@@ -494,11 +494,11 @@ export default function Home() {
           <li>
             <a
               href="#"
-              class="block py-2 px-3 leading-tight text-gray-500 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+              className="block py-2 px-3 leading-tight text-gray-500 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
             >
-              <span class="sr-only">Next</span>
+              <span className="sr-only">Next</span>
               <svg
-                class="w-5 h-5"
+                className="w-5 h-5"
                 aria-hidden="true"
                 fill="currentColor"
                 viewBox="0 0 20 20"
@@ -521,16 +521,16 @@ export default function Home() {
     return (
       <div className="flex flex-row items-center">
         {/* <h1 className="text-2xl font-bold mr-2">Supplier</h1> */}
-        <div class="inline-block relative w-64">
-          <select class="block appearance-none w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-cyan-500 focus:border-cyan-500 pr-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-cyan-500 dark:focus:border-cyan-500">
+        <div className="inline-block relative w-64">
+          <select className="block appearance-none w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-cyan-500 focus:border-cyan-500 pr-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-cyan-500 dark:focus:border-cyan-500">
             <option>Year</option>
             <option>2022</option>
             <option>2019</option>
             <option>2018</option>
           </select>
-          <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+          <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
             <svg
-              class="fill-current h-4 w-4"
+              className="fill-current h-4 w-4"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
             >
@@ -545,15 +545,15 @@ export default function Home() {
     return (
       <div className="flex flex-row items-center">
         {/* <h1 className="text-2xl font-bold mr-2">Supplier</h1> */}
-        <div class="inline-block relative w-64">
-          <select class="block appearance-none w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-cyan-500 focus:border-cyan-500 pr-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-cyan-500 dark:focus:border-cyan-500">
+        <div className="inline-block relative w-64">
+          <select className="block appearance-none w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-cyan-500 focus:border-cyan-500 pr-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-cyan-500 dark:focus:border-cyan-500">
             <option>Supplier</option>
             <option>Option 2</option>
             <option>Option 3</option>
           </select>
-          <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+          <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
             <svg
-              class="fill-current h-4 w-4"
+              className="fill-current h-4 w-4"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
             >
@@ -567,15 +567,15 @@ export default function Home() {
 
   function SearchComponent() {
     return (
-      <form class="flex items-center ">
-        <label for="simple-search" class="sr-only">
+      <form className="flex items-center ">
+        <label for="simple-search" className="sr-only">
           Search
         </label>
-        <div class="relative w-full">
-          <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+        <div className="relative w-full">
+          <div className="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
             <svg
               aria-hidden="true"
-              class="w-5 h-5 text-gray-500 dark:text-gray-400"
+              className="w-5 h-5 text-gray-500 dark:text-gray-400"
               fill="currentColor"
               viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
@@ -590,14 +590,14 @@ export default function Home() {
           <input
             type="text"
             id="simple-search"
-            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-cyan-500 focus:border-cyan-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-cyan-500 dark:focus:border-cyan-500"
+            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-cyan-500 focus:border-cyan-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-cyan-500 dark:focus:border-cyan-500"
             placeholder="Search"
             required=""
           />
         </div>
         <button
           type="submit"
-          class="flex flex-row p-2.5 ml-2 text-sm font-medium text-white bg-cyan-600 rounded-lg border border-cyan-700 hover:bg-cyan-800 focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:bg-cyan-600 dark:hover:bg-cyan-700 dark:focus:ring-cyan-800"
+          className="flex flex-row p-2.5 ml-2 text-sm font-medium text-white bg-cyan-600 rounded-lg border border-cyan-700 hover:bg-cyan-800 focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:bg-cyan-600 dark:hover:bg-cyan-700 dark:focus:ring-cyan-800"
         >
           <svg
             className="w-5 h-5 mr-2"
@@ -608,12 +608,12 @@ export default function Home() {
           >
             <path
               stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
+              strokeLinejoin="round"
+              strokeWidth="2"
               d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
             ></path>
           </svg>
-          <span class="sr-only">Search</span>
+          <span className="sr-only">Search</span>
           Search
         </button>
       </form>
