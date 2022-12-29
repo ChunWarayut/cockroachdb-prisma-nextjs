@@ -9,22 +9,12 @@ module.exports = exports = function auditinfo(schema, options) {
       ref: "User",
       required: true,
     },
-
     modifiedBy: {
       type: Schema.ObjectId,
       ref: "User",
       required: true,
     },
-    isActive: {
-      type: Schema.Boolean,
-      required: true,
-      index: true,
-    },
-    orgsnisationId: {
-      type: Schema.ObjectId,
-      ref: "Organisation",
-      required: true,
-      index: true,
-    },
+    isActive: { type: Boolean, required: true, default: true },
+    orgsnisationId: { type: Schema.ObjectId, ref: "Organisation" },
   });
 };
