@@ -1,7 +1,7 @@
 // import the necessary modules
 const mongoose = require("mongoose");
 const uniqueValidator = require("mongoose-unique-validator");
-const plugin = require("../plugin");
+const plugin = require("models/plugin");
 const Schema = mongoose.Schema;
 const SessionSchema = new Schema({
   userId: { type: Schema.ObjectId, ref: "User", index: true },
