@@ -3,6 +3,8 @@ const mongoose = require("mongoose");
 const uniqueValidator = require("mongoose-unique-validator");
 const plugin = require("../plugin");
 const Schema = mongoose.Schema;
+
+
 const SecuredItemSchema = new Schema({
   code: { type: String, required: true, index: true },
   name: { type: String, required: true, index: true },
