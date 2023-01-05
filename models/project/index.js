@@ -1,12 +1,18 @@
- const mongoose = require("mongoose");
- const uniqueValidator = require("mongoose-unique-validator");
- const plugin = require("models/plugin");
- const Schema = mongoose.Schema;
+const mongoose = require("mongoose");
+const uniqueValidator = require("mongoose-unique-validator");
+const plugin = require("models/plugin");
+
+const Schema = mongoose.Schema;
 
 const ProjectSupplierSchema = new Schema({
   supplierId: { type: Schema.ObjectId, ref: "Supplier" },
 });
 ProjectSupplierSchema.set("timestamps", true);
+
+const ProjectFileSchema = new Schema({
+  fileId: { type: Schema.ObjectId, ref: "Supplier" },
+});
+ProjectFileSchema.set("timestamps", true);
 
 const DocumentItemSchema = new Schema({
   itemId: { type: Schema.ObjectId, ref: "Item" },
@@ -32,9 +38,7 @@ const DocumentSchema = new Schema({
 DocumentSchema.plugin(uniqueValidator);
 DocumentSchema.set("timestamps", true);
 
-
-
- const ProjectSchema = new Schema({
+const ProjectSchema = new Schema({
   code: { type: String, required: true, index: true, unique: true },
   name: { type: String, required: true },
   projectDetails: { type: String, required: true },
@@ -45,11 +49,14 @@ DocumentSchema.set("timestamps", true);
     required: true,
   },
   projectSuppliers: [ProjectSupplierSchema],
-  supplierQuotations: [DocumentSchema],
   quotation: DocumentSchema,
   purchaseOrder: DocumentSchema,
   invoice: DocumentSchema,
   receipt: DocumentSchema,
+  supplierQuotations: [DocumentSchema],
+  customerPurchaseOrders: [ProjectFileSchema],
+  supplierInvoices: [ProjectFileSchema],
+  customerReceipts: [ProjectFileSchema],
   startDate: Date,
   endDate: Date,
   status: { type: Schema.ObjectId, ref: "ReferenceValue", required: true },

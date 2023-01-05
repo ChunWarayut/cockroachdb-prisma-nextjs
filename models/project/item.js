@@ -8,7 +8,7 @@
   code: { type: String, required: true, index: true, unique: true },
   name: { type: String, required: true },
   unitPrice: { type: Number, required: true },
-  itemSpecId: { type: Schema.ObjectId, ref: "ItemSpec"},
+  itemSpecId: { type: Schema.ObjectId, ref: "File"},
   orderCatId: { type: Schema.ObjectId, ref: "ReferenceValue", required: true },
   orderSubCatId: {
     type: Schema.ObjectId,
