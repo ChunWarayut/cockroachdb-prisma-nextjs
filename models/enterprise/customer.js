@@ -1,8 +1,8 @@
-var mongoose = require("mongoose");
-var uniqueValidator = require("mongoose-unique-validator");
+ const mongoose = require("mongoose");
+ const uniqueValidator = require("mongoose-unique-validator");
 const plugin = require("models/plugin");
-var Schema = mongoose.Schema;
-var ContractPersonSchema = new Schema({
+ const Schema = mongoose.Schema;
+ const ContractPersonSchema = new Schema({
   name: String,
   phoneNumber: String,
   mobileNumber: String,
@@ -11,7 +11,7 @@ var ContractPersonSchema = new Schema({
 });
 ContractPersonSchema.set("timestamps", true);
 
-var CustomerSchema = new Schema({
+ const CustomerSchema = new Schema({
   code: { type: String, required: true, index: true, unique: true },
   name: { type: String, required: true },
   localName: { type: String, required: true },

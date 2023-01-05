@@ -1,7 +1,7 @@
-var mongoose = require("mongoose");
-var uniqueValidator = require("mongoose-unique-validator");
+ const mongoose = require("mongoose");
+ const uniqueValidator = require("mongoose-unique-validator");
 const plugin = require("../plugin");
-var Schema = mongoose.Schema;
+ const Schema = mongoose.Schema;
 
 const UserRoleSchema = new Schema({
   roleId: { type: Schema.ObjectId, ref: "Role" },
@@ -9,7 +9,7 @@ const UserRoleSchema = new Schema({
 });
 UserRoleSchema.set("timestamps", true);
 
-var UserSchema = new Schema({
+ const UserSchema = new Schema({
   code: { type: String, required: true, index: true, unique: true },
   name: { type: String, required: true },
   localName: { type: String, required: true },

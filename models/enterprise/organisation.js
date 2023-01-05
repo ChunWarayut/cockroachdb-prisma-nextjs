@@ -1,8 +1,8 @@
-var mongoose = require("mongoose");
-var uniqueValidator = require("mongoose-unique-validator");
-var Schema = mongoose.Schema;
+ const mongoose = require("mongoose");
+ const uniqueValidator = require("mongoose-unique-validator");
+ const Schema = mongoose.Schema;
 
-var OrganisationSchema = new Schema({
+ const OrganisationSchema = new Schema({
   code: { type: String, required: true, index: true, unique: true },
   name: { type: String, required: true },
   description: String,

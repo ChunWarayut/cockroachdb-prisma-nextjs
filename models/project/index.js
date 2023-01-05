@@ -1,7 +1,7 @@
-var mongoose = require("mongoose");
-var uniqueValidator = require("mongoose-unique-validator");
-var plugin = require("models/plugin");
-var Schema = mongoose.Schema;
+ const mongoose = require("mongoose");
+ const uniqueValidator = require("mongoose-unique-validator");
+ const plugin = require("models/plugin");
+ const Schema = mongoose.Schema;
 
 const ProjectSupplierSchema = new Schema({
   supplierId: { type: Schema.ObjectId, ref: "Supplier" },
@@ -34,7 +34,7 @@ DocumentSchema.set("timestamps", true);
 
 
 
-var ProjectSchema = new Schema({
+ const ProjectSchema = new Schema({
   code: { type: String, required: true, index: true, unique: true },
   name: { type: String, required: true },
   projectDetails: { type: String, required: true },

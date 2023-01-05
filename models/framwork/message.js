@@ -1,9 +1,9 @@
-var mongoose = require("mongoose");
-var uniqueValidator = require("mongoose-unique-validator");
-var plugin = require("../plugin");
-var Schema = mongoose.Schema;
+ const mongoose = require("mongoose");
+ const uniqueValidator = require("mongoose-unique-validator");
+ const plugin = require("../plugin");
+ const Schema = mongoose.Schema;
 
-var MessageSchema = new Schema({
+ const MessageSchema = new Schema({
   status: { type: String, required: true },
   code: { type: String, required: true, index: true, unique: true },
   message: { type: String, required: true },
