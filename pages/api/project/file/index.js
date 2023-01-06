@@ -4,6 +4,7 @@ import { doSuccess, doError } from "utils/response";
 // import { createModel } from 'mongoose-gridfs';
 // import Quotation from "models/project/quotation";
 
+
 export default async function handler(req, res) {
   const { method } = req;
   await dbConnect();
@@ -33,6 +34,8 @@ export default async function handler(req, res) {
 
 export const config = {
   api: {
-    bodyParser: false
+    bodyParser: {
+      sizeLimit: '10mb',
+    },
   },
 };
