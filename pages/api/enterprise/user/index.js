@@ -1,7 +1,7 @@
 import dbConnect from "lib/dbConnect";
-import { doSuccess, doError } from "utils/response";
 import User from "@/models/enterprise/users";
-import _ from "lodash";
+import { doSuccess, doError } from "utils/response";
+import { hashedPassword } from "utils/encrypt";
 
 export default async function handler(req, res) {
   const { method } = req;
@@ -16,6 +16,8 @@ export default async function handler(req, res) {
       }
     case "POST":
       try {
+        const users = req.body;
+        users.password = hashedPassword(users.password);
         const datas = await User.insertMany(req.body);
         return doSuccess(res, datas);
       } catch (err) {
