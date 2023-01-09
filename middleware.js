@@ -31,8 +31,5 @@ export async function middleware(req) {
 }
 
 export const config = {
-  api: {
-    bodyParser: false, // Disallow body parsing, consume as stream
-  },
   matcher: ["/api/:path*"],
 };

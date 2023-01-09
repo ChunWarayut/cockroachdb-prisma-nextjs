@@ -1,29 +1,23 @@
 import dbConnect from "lib/dbConnect";
 import { doSuccess, doError } from "utils/response";
-// import { createReadStream } from 'fs';
-// import { createModel } from 'mongoose-gridfs';
-// import Quotation from "models/project/quotation";
-
+import File from "models/project/file";
+import _ from "lodash";
 
 export default async function handler(req, res) {
   const { method } = req;
   await dbConnect();
-  // const Attachment = createModel();
-  // console.log("file");
-
   switch (method) {
     case "GET":
       try {
-        // const datas = await Quotation.find({});
-        return doSuccess(res, {});
+        const datas = await File.find({});
+        return doSuccess(res, datas);
       } catch (err) {
         return doError(res, "EXCEPTION", err.message);
       }
     case "POST":
       try {
-        // const datas = await Quotation.insertMany(req.body);
-        console.log("hello");
-        return doSuccess(res, {});
+        const datas = await File.insertMany(req.body);
+        return doSuccess(res, datas);
       } catch (err) {
         return doError(res, "EXCEPTION", err.message);
       }
@@ -31,11 +25,3 @@ export default async function handler(req, res) {
       return doError(res, "METHERR");
   }
 }
-
-export const config = {
-  api: {
-    bodyParser: {
-      sizeLimit: '10mb',
-    },
-  },
-};

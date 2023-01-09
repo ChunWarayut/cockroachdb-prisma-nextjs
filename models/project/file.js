@@ -7,7 +7,7 @@ const FileSchema = new Schema({
  code: { type: String, required: true, index: true, unique: true },
  name: { type: String, required: true},
  fileType: { type: Schema.ObjectId, ref: "ReferenceValue", required: true },
- data: { type: String, required: true },
+ dataUri: { type: String, required: true },
  comment: { type: String },
 });
 
