@@ -1,8 +1,9 @@
- const mongoose = require("mongoose");
- const uniqueValidator = require("mongoose-unique-validator");
+const mongoose = require("mongoose");
+const uniqueValidator = require("mongoose-unique-validator");
+const mongoose_delete = require("mongoose-delete");
 const plugin = require("models/plugin");
- const Schema = mongoose.Schema;
- const ContractPersonSchema = new Schema({
+const Schema = mongoose.Schema;
+const ContractPersonSchema = new Schema({
   name: String,
   phoneNumber: String,
   mobileNumber: String,
@@ -11,7 +12,7 @@ const plugin = require("models/plugin");
 });
 ContractPersonSchema.set("timestamps", true);
 
- const CustomerSchema = new Schema({
+const CustomerSchema = new Schema({
   code: { type: String, required: true, index: true, unique: true },
   name: { type: String, required: true },
   localName: { type: String, required: true },
@@ -28,6 +29,11 @@ ContractPersonSchema.set("timestamps", true);
 
 CustomerSchema.plugin(plugin);
 CustomerSchema.plugin(uniqueValidator);
+CustomerSchema.plugin(mongoose_delete, {
+  deletedAt: true,
+  deletedBy: true,
+  overrideMethods: true,
+});
 CustomerSchema.set("timestamps", true);
 
 module.exports =
