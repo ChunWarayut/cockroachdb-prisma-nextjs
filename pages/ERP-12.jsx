@@ -12,6 +12,7 @@ import { AiFillFilePdf, AiFillSave, AiOutlineFileDone } from 'react-icons/ai';
 import { BiBookContent, BiCart, BiNews } from 'react-icons/bi';
 import { GiStabbedNote } from 'react-icons/gi';
 import { FaFileInvoiceDollar } from 'react-icons/fa';
+import { invoicePDF } from "@/utils/invoicePDF";
 
 export default function Home() {
   const { data: session } = useSession();
@@ -160,7 +161,7 @@ export default function Home() {
           </div>
         </div>
 
-
+        <button onClick={()=> invoicePDF()}>EXPORT PDF</button>
         <div className="w-full grid grid-cols-1 gap-4 mb-4">
           <div className="bg-white shadow rounded-lg p-4 sm:p-6 xl:p-8  2xl:col-span-2">
             <div className="w-full gap-4 mb-4 flex items-center justify-start">
