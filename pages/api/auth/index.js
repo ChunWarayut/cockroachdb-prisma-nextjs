@@ -1,7 +1,7 @@
 import _ from "lodash";
 
 import dbConnect from "lib/dbConnect";
-import { doSuccess, doError } from "utils/response";
+import { redSuccess, doError } from "utils/response";
 import { comparePassword } from "utils/encrypt";
 import User from "@/models/enterprise/users";
 import Role from "@/models/framwork/role";
@@ -17,7 +17,7 @@ export default async function handler(req, res) {
     const userInfo = await User.findOne({ code }).populate("userRoles.roleId");
     const isAuthen = await comparePassword(password, userInfo.password);
     userInfo.password = undefined;
-    if (isAuthen) return doSuccess(res, userInfo);
+    if (isAuthen) return redSuccess(res, userInfo);
     return doError(res, "AUTERR");
   } catch (err) {
     return doError(res, "EXCEPTION", err.message);
