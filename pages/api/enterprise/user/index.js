@@ -1,6 +1,6 @@
 import dbConnect from "lib/dbConnect";
 import User from "@/models/enterprise/users";
-import { doSuccess, doError } from "utils/response";
+import { createSuccess, redSuccess, doError } from "utils/response";
 import { hashedPassword } from "utils/encrypt";
 
 export default async function handler(req, res) {
@@ -10,7 +10,7 @@ export default async function handler(req, res) {
     case "GET":
       try {
         const datas = await User.find({});
-        return doSuccess(res, datas);
+        return redSuccess(res, datas);
       } catch (err) {
         return doError(res, "EXCEPTION", err.message);
       }
@@ -19,7 +19,7 @@ export default async function handler(req, res) {
         const users = req.body;
         users.password = hashedPassword(users.password);
         const datas = await User.insertMany(req.body);
-        return doSuccess(res, datas);
+        return createSuccess(res, datas);
       } catch (err) {
         return doError(res, "EXCEPTION", err.message);
       }
