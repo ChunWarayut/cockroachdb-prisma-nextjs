@@ -3,12 +3,25 @@ var uniqueValidator = require("mongoose-unique-validator");
 const plugin = require("../plugin");
 var Schema = mongoose.Schema;
 
+const UserRoleSchema = new Schema({
+  roleId: { type: Schema.ObjectId, ref: "Role" },
+  isDefault: { type: Boolean, required: true, default: true },
+});
+UserRoleSchema.set("timestamps", true);
+
 var UserSchema = new Schema({
   code: { type: String, required: true, index: true, unique: true },
   name: { type: String, required: true },
-  message: { type: String, required: true },
-  localMessage: { type: String, required: true },
-  errMessage: String,
+  localName: { type: String, required: true },
+  supplierId: { type: Schema.ObjectId, ref: "Supplier", index: true },
+  phoneNumber: String,
+  mobileNumber: String,
+  fax: String,
+  email: String,
+  userRoles: [UserRoleSchema],
+  password: { type: String, required: true },
+  isLocked: Boolean,
+  lastLoginDate: Date,
 });
 
 UserSchema.plugin(plugin);

@@ -11,7 +11,7 @@ var ContractPersonSchema = new Schema({
 });
 ContractPersonSchema.set("timestamps", true);
 
-var CustomerSchema = new Schema({
+var SupplierSchema = new Schema({
   code: { type: String, required: true, index: true, unique: true },
   name: { type: String, required: true },
   localName: { type: String, required: true },
@@ -24,11 +24,12 @@ var CustomerSchema = new Schema({
   mobileNumber: String,
   fax: String,
   email: String,
+  password: String,
 });
 
-CustomerSchema.plugin(plugin);
-CustomerSchema.plugin(uniqueValidator);
-CustomerSchema.set("timestamps", true);
+SupplierSchema.plugin(plugin);
+SupplierSchema.plugin(uniqueValidator);
+SupplierSchema.set("timestamps", true);
 
 module.exports =
-  mongoose.models.Customer || mongoose.model("Customer", CustomerSchema);
+  mongoose.models.Supplier || mongoose.model("Supplier", SupplierSchema);
