@@ -10,7 +10,7 @@ const ProjectSupplierSchema = new Schema({
 ProjectSupplierSchema.set("timestamps", true);
 
 const ProjectFileSchema = new Schema({
-  fileId: { type: Schema.ObjectId, ref: "Supplier" },
+  fileId: { type: Schema.ObjectId, ref: "File" },
 });
 ProjectFileSchema.set("timestamps", true);
 
