@@ -1,6 +1,6 @@
 import dbConnect from "lib/dbConnect";
 import { doSuccess, doError } from "utils/response";
-import Item from "@/models/enterprise/item";
+import Item from "@/models/project/item";
 import _ from "lodash";
 
 export default async function handler(req, res) {
