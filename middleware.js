@@ -12,14 +12,11 @@ export async function middleware(req) {
     return NextResponse.next();
   if (basicAuth) {
     const auth = basicAuth.split(" ")[1];
-
     const [user, pwd] = Buffer.from(auth, "base64").toString().split(":");
-    // console.log(user, pwd);
     if (isAuthen(user, pwd)) {
       return NextResponse.next();
     }
   }
-
   req.nextUrl.pathname = "/api/auth/unauthorized";
   return NextResponse.redirect(req.nextUrl);
 }

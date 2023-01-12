@@ -1,5 +1,7 @@
 import dbConnect from "lib/dbConnect";
-import Message from "models/framwork/message";
+import { getMessage } from "./message";
+import _ from "lodash";
+
 export function doSuccess(res, data) {
   return res.status(200).json({
     result: {
@@ -11,11 +13,11 @@ export function doSuccess(res, data) {
     data,
   });
 }
-export async function doError(res, code, message) {
+export async function doError(res, code, err) {
   await dbConnect();
-  const msg = await Message.findOne({ code });
-  msg.errorMessage = message;
-  return res.status(200).json({
+  const msg = await getMessage(code);
+  if (msg) msg.errMessage = err;
+  return res.status(400).json({
     results: msg,
   });
 }
