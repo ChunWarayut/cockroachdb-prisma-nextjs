@@ -1,0 +1,1 @@
+var uniqueValidator = require('mongoose-unique-validator');

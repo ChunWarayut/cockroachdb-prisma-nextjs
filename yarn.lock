@@ -1713,10 +1713,25 @@
   "resolved" "https://registry.npmjs.org/lilconfig/-/lilconfig-2.0.6.tgz"
   "version" "2.0.6"
 
-"lodash-es@^4.17.21":
-  "integrity" "sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw=="
-  "resolved" "https://registry.npmjs.org/lodash-es/-/lodash-es-4.17.21.tgz"
-  "version" "4.17.21"
+lodash.foreach@^4.1.0:
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/lodash.foreach/-/lodash.foreach-4.5.0.tgz#1a6a35eace401280c7f06dddec35165ab27e3e53"
+  integrity sha512-aEXTF4d+m05rVOAUG3z4vZZ4xVexLKZGF0lIxuHZ1Hplpk/3B6Z1+/ICICYRLm7c41Z2xiejbkCkJoTlypoXhQ==
+
+lodash.get@^4.0.2:
+  version "4.4.2"
+  resolved "https://registry.yarnpkg.com/lodash.get/-/lodash.get-4.4.2.tgz#2d177f652fa31e939b4438d5341499dfa3825e99"
+  integrity sha512-z+Uw/vLuy6gQe8cfaFWD7p0wVv8fJl3mbzXh33RS+0oW2wvUqiRXiQ69gLWSLpgB5/6sU+r6BlQR0MBILadqTQ==
+
+lodash.merge@^4.6.2:
+  version "4.6.2"
+  resolved "https://registry.yarnpkg.com/lodash.merge/-/lodash.merge-4.6.2.tgz#558aa53b43b661e1925a0afdfa36a9a1085fe57a"
+  integrity sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==
+
+lodash@^4.17.21:
+  version "4.17.21"
+  resolved "https://registry.npmjs.org/lodash/-/lodash-4.17.21.tgz"
+  integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
 
 "lodash@^4.17.21":
   "integrity" "sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg=="
@@ -2053,10 +2068,19 @@
     "@aws-sdk/credential-providers" "^3.186.0"
     "saslprep" "^1.0.3"
 
-"mongoose@^6.7.5":
-  "integrity" "sha512-qrVWefJK+wFNBH0ALV+oiyJ+FN42O/BqvHFmlFJJ2LKuNmQEOE0JV8FCxnZqtanwbHs4i+k/SkjhtC+C01haaw=="
-  "resolved" "https://registry.npmjs.org/mongoose/-/mongoose-6.8.3.tgz"
-  "version" "6.8.3"
+mongoose-unique-validator@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/mongoose-unique-validator/-/mongoose-unique-validator-3.1.0.tgz#10d6fa10ccf5515461e3b5693f193d227546d60b"
+  integrity sha512-UsBBlFapip8gc8x1h+nLWnkOy+GTy9Z+zmTyZ35icLV3EoLIVz180vJzepfMM9yBy2AJh+maeuoM8CWtqejGUg==
+  dependencies:
+    lodash.foreach "^4.1.0"
+    lodash.get "^4.0.2"
+    lodash.merge "^4.6.2"
+
+mongoose@^6.7.5:
+  version "6.7.5"
+  resolved "https://registry.yarnpkg.com/mongoose/-/mongoose-6.7.5.tgz#3e97faabf71952020e6a528513ab63ead936cc18"
+  integrity sha512-3ppxBxDUIoQKYISVpAg7hjmV1lkGBN3tN9AkQr1Vqc68L5k+Bo+uyfOhpbCFpCf5JZLcEO4cmuB5YX+d9h3plw==
   dependencies:
     "bson" "^4.7.0"
     "kareem" "2.5.1"
