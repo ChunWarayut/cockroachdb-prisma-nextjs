@@ -1,15 +1,16 @@
- const mongoose = require("mongoose");
- const uniqueValidator = require("mongoose-unique-validator");
+const mongoose = require("mongoose");
+const uniqueValidator = require("mongoose-unique-validator");
 const plugin = require("../plugin");
- const Schema = mongoose.Schema;
+const Schema = mongoose.Schema;
 
 const UserRoleSchema = new Schema({
   roleId: { type: Schema.ObjectId, ref: "Role" },
   isDefault: { type: Boolean, required: true, default: true },
+  isActive: { type: Boolean, required: true, default: true },
 });
 UserRoleSchema.set("timestamps", true);
 
- const UserSchema = new Schema({
+const UserSchema = new Schema({
   code: { type: String, required: true, index: true, unique: true },
   name: { type: String, required: true },
   localName: { type: String, required: true },
